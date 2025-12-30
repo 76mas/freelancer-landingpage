@@ -66,6 +66,7 @@ const Hero = ({}) => {
       </Container>
     </section>
   );
+  
 };
 
 export default Hero;

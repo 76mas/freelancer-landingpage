@@ -151,17 +151,17 @@ const Conect = () => {
           d="M 12.222 0 C 17.622 0 22 4.378 22 9.778 M 12.833 4.278 C 15.533 4.278 17.722 6.467 17.722 9.167"
           fill="transparent"
           stroke="rgb(71, 71, 71)"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-dasharray=""
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeDasharray=""
         ></path>
         <path
           d="M 7.526 3.315 L 7.035 2.207 C 6.712 1.484 6.552 1.122 6.311 0.845 C 6.009 0.497 5.616 0.242 5.177 0.108 C 4.826 0 4.429 0 3.637 0 C 2.478 0 1.899 0 1.412 0.222 C 0.813 0.514 0.348 1.026 0.116 1.651 C -0.059 2.156 -0.009 2.676 0.091 3.716 C 1.158 14.777 7.223 20.842 18.284 21.909 C 19.323 22.009 19.843 22.059 20.349 21.884 C 20.974 21.652 21.485 21.188 21.777 20.589 C 21.999 20.101 21.999 19.522 21.999 18.363 C 21.999 17.57 21.999 17.174 21.892 16.823 C 21.757 16.383 21.502 15.99 21.155 15.689 C 20.877 15.448 20.516 15.288 19.792 14.965 L 18.685 14.474 C 17.9 14.126 17.509 13.951 17.111 13.913 C 16.729 13.877 16.344 13.93 15.987 14.069 C 15.615 14.215 15.285 14.489 14.626 15.039 C 13.969 15.585 13.642 15.858 13.241 16.004 C 12.856 16.137 12.445 16.18 12.041 16.128 C 11.619 16.067 11.295 15.893 10.649 15.547 C 8.637 14.471 7.528 13.363 6.453 11.351 C 6.107 10.703 5.935 10.381 5.872 9.958 C 5.82 9.554 5.862 9.144 5.994 8.76 C 6.141 8.358 6.415 8.03 6.961 7.374 C 7.511 6.714 7.785 6.385 7.93 6.012 C 8.07 5.655 8.124 5.27 8.087 4.889 C 8.049 4.492 7.874 4.099 7.526 3.315 Z"
           fill="transparent"
           stroke="rgb(71, 71, 71)"
-          stroke-linecap="round"
-          stroke-miterlimit="10"
-          stroke-dasharray=""
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeDasharray=""
         ></path>
       </g>
     </svg>
@@ -181,18 +181,20 @@ const AboutIcon = () => {
         <path
           d="M 19 18.127 C 19 23.136 14.557 27.173 9.153 26.994 C 4.305 26.832 0.318 23.207 0.018 18.684 C 0.002 18.451 -0.003 18.218 0.002 17.986 C 0.048 15.113 3.238 13.201 6.081 14.294 C 7.136 14.701 8.292 14.926 9.507 14.926 C 10.722 14.926 11.866 14.705 12.916 14.302 C 15.789 13.201 18.975 15.154 19 18.056 C 19 18.081 19 18.102 19 18.127 Z"
           fill="transparent"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="rgb(0, 0, 0)"
-          stroke-miterlimit="10"
-          stroke-dasharray=""
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeDasharray=""
         ></path>
         <path
           d="M 3.2 5.729 C 3.2 2.565 5.803 0 9.013 0 C 12.224 0 14.827 2.565 14.827 5.729 C 14.827 8.893 12.224 11.457 9.013 11.457 C 5.803 11.457 3.2 8.893 3.2 5.729 Z"
           fill="transparent"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="rgb(0, 0, 0)"
-          stroke-miterlimit="10"
-          stroke-dasharray=""
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeDasharray=""
         ></path>
       </g>
     </svg>
@@ -242,16 +244,16 @@ const About = () => {
             </div>
           </div>
 
-          <div className="flex w-full h-full  items-center justify-between ">
-            <div className="w-full h-full">
+          <div className="grid grid-cols-2 w-full h-ful  items-center justify-between ">
+            <div className="w-[90%] h-full ">
               <CustomShapeImage
-                width={500}
-                height={500}
+                width={800}
+                height={800}
                 src="https://images.unsplash.com/photo-1759337283317-a452c486d79a?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8"
-              />
+              />  
             </div>
 
-            <div className="flex flex-col gap-10 h-full items-start w-full">
+            <div className="flex flex-col gap-10 h-full  items-start w-full">
               <div className="grid grid-cols-2 gap-3">
                 {ArrayCard.map((item, index) => (
                   <div
