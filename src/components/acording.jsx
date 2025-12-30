@@ -66,14 +66,15 @@ export default function BasicAccordion() {
   return (
     <Accordion
       variant="light"
-      className="w-full flex flex-col gap-2"
+      showDivider={true}
+      className="w-full"
       itemClasses={{
-        base: "py-0 w-full",
+        base: "py-0 w-full border-b border-white",
         title: "font-normal text-md text-white",
         trigger:
-          "px-2 py-4 data-[hover=true]:bg-default-100/10 rounded-lg h-14 flex items-center justify-between",
+          "px-2 py-4 data-[hover=true]:bg-default-100/10 h-14 flex items-center justify-between",
         indicator: "text-md text-white",
-        content: "text-sm px-2 text-gray-400",
+        content: "text-sm px-2 text-gray-400 pb-4",
       }}
     >
       {items.map((item) => (

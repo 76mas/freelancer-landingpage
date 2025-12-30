@@ -1,11 +1,10 @@
-import CustomShapeVideo from "@/components/CustomShapeVideo";
-import CustomShapeImage from "../components/CustomShapeImage";
-import Container from "@/components/Continor";
 import Hero from "@/sections/Hero";
 import Header from "@/components/header";
 import About from "@/sections/About";
 import Service from "@/sections/Service";
 import Projects from "@/sections/Projects";
+import Blog from "@/sections/Blog";
+import Fqa from "@/sections/Fqa";
 
 export default function Home() {
   return (
@@ -15,6 +14,8 @@ export default function Home() {
       <About />
       <Service />
       <Projects />
+      <Blog />
+      <Fqa />
 
     </div>
   );

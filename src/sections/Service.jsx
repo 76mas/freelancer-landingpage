@@ -1,6 +1,7 @@
 import BasicAccordion from "@/components/acording";
 import Container from "@/components/Continor";
 import { IoSettingsOutline } from "react-icons/io5";
+
 const Service = () => {
   return (
     <section className="min-h-screen text-black w-full flex justify-center pb-20">
