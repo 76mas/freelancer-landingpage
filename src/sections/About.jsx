@@ -1,6 +1,7 @@
 import Container from "@/components/Continor";
 import CustomShapeImage from "@/components/CustomShapeImage";
 import MainButton from "@/components/mainbutton";
+import CountUp from "@/components/upCount";
 
 const ArrowSvg = () => {
   return (
@@ -203,22 +204,26 @@ const AboutIcon = () => {
 
 const ArrayCard = [
   {
-    number: "13+",
+    number: 13,
+    afterNumber: "+",
     title: "Years of Experience",
     icon: <ArrowSvg />,
   },
   {
-    number: "250+",
+    number: 250,
+    afterNumber: "+",
     title: "quality projects completed",
     icon: <BackSvg />,
   },
   {
-    number: "9m",
+    number: 9,
+    afterNumber: "m",
     title: "Total satisfied clients",
     icon: <FolderSvg />,
   },
   {
-    number: "6k+",
+    number: 6,
+    afterNumber: "k",
     title: "Happy clients",
     icon: <HomeSvg />,
   },
@@ -226,9 +231,12 @@ const ArrayCard = [
 
 const About = () => {
   return (
-    <section className="w-full h-full min-h-screen flex  justify-center items-center bg-">
+    <section className="w-full h-full min-h-screen flex  justify-center items-center ">
+    
+    
       <Container>
         <div className="flex flex-col gap-3 justify-between items-center ">
+          
           <div className="w-full h-full grid grid-cols-2 items-start justify-between gap-3   ">
             <h2 className="text-md font-bold text-[#4e4e4e] gap-2 w-full flex text-start pl-3">
               <AboutIcon /> About Us
@@ -244,13 +252,15 @@ const About = () => {
             </div>
           </div>
 
+
+
           <div className="grid grid-cols-2 w-full h-ful  items-center justify-between ">
             <div className="w-[90%] h-full ">
               <CustomShapeImage
-                width={800}
-                height={800}
+                width={500}
+                height={400}
                 src="https://images.unsplash.com/photo-1759337283317-a452c486d79a?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8"
-              />  
+              />
             </div>
 
             <div className="flex flex-col gap-10 h-full  items-start w-full">
@@ -263,7 +273,15 @@ const About = () => {
                     <div className="flex items-center gap-4">
                       {item.icon}
                       <p className="text-4xl font-bold text-black ">
-                        {item.number}
+                        <CountUp
+                          from={0}
+                          to={item.number}
+                          separator=","
+                          direction="up"
+                          duration={1}
+                          className="count-up-text"
+                        />
+                        {item.afterNumber}
                       </p>
                     </div>
                     <div className="w-full h-px bg-[#dbdbdb]"></div>
@@ -295,8 +313,13 @@ const About = () => {
               </div>
             </div>
           </div>
+
+
         </div>
       </Container>
+
+
+
     </section>
   );
 };
