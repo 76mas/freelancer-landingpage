@@ -5,6 +5,7 @@ import Service from "@/sections/Service";
 import Projects from "@/sections/Projects";
 import Blog from "@/sections/Blog";
 import Fqa from "@/sections/Fqa";
+import Contect from "@/sections/contect";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
       <Projects />
       <Blog />
       <Fqa />
-
+      <Contect />
     </div>
   );
 }

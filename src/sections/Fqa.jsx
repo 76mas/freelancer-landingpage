@@ -1,3 +1,4 @@
+"use client";
 import Container from "@/components/Continor";
 import CustomShapeImage from "@/components/CustomShapeImage";
 import AcordingFq from "@/components/acordingFq";
@@ -23,46 +24,55 @@ const Star = () => {
     </svg>
   );
 };
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/constants/translations";
+
 const Fqa = () => {
+  const { lang } = useLanguage();
+  const t = translations[lang].faq;
+
   return (
-    <section className="w-full text-black bg-white flex items-center justify-center py-24">
+    <section
+      id="faq"
+      data-bg="white"
+      className="w-full text-black bg-white flex items-center justify-center py-24"
+    >
       <Container>
-        <div className="flex flex-col gap-16">
-          <div className="flex flex-col items-center text-center gap-4 max-w-2xl mx-auto w-full">
-            <div className="flex items-center text-gray-700 justify-center gap-2 w-full">
+        <div className="flex flex-col gap-10 md:gap-16">
+          <div className="flex flex-col items-center text-center gap-4 max-w-2xl mx-auto w-full px-4">
+            <div className="flex items-center text-[#4e4e4e] font-bold justify-center gap-2 w-full">
               <Star />
-              <h1 className="text-2xl font-black">Support</h1>
+              <h1 className="text-xl md:text-2xl font-black">{t.badge}</h1>
             </div>
-            <h2 className="text-5xl font-black leading-tight tracking-tight">
-              Got Questions? <br /> We've Got Answers.
+            <h2 className="text-3xl md:text-5xl font-black leading-tight tracking-tight">
+              {t.title1} <br className="hidden md:block" /> {t.title2}
             </h2>
-            <p className="text-neutral-500 text-lg">
-              Everything you need to know about our design process, timelines,
-              and how we bring your vision to life.
+            <p className="text-neutral-500 text-base md:text-lg">
+              {t.description}
             </p>
           </div>
 
-          <div className="w-full h-fit grid grid-cols-1 lg:grid-cols-2 gap-16 items-start lg:items-center">
-            <div className="relative">
-              <CustomShapeImage
-                src="https://plus.unsplash.com/premium_photo-1733760124949-7d15ff2f677e?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                width={600}
-                height={600}
-              />
+          <div className="w-full h-fit grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-start lg:items-center px-4">
+            <div className="relative w-full flex justify-center lg:block">
+              <div className="w-full max-w-[500px]">
+                <CustomShapeImage
+                  width={500}
+                  height={400}
+                  src="https://plus.unsplash.com/premium_photo-1733760124949-7d15ff2f677e?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                />
+              </div>
             </div>
 
-            <div className="w-full flex flex-col gap-4">
+            <div className="w-full flex flex-col gap-6">
               <AcordingFq />
-              <div className="mt-4 p-6 bg-[#f6f5fa] rounded-2xl flex items-center justify-between">
+              <div className="mt-4 p-6 bg-[#f6f5fa] rounded-3xl flex flex-col sm:flex-row items-center sm:justify-between gap-6 sm:gap-0 text-center sm:text-left">
                 <div>
-                  <h4 className="font-bold text-lg">Still have questions?</h4>
-                  <p className="text-sm text-neutral-500">
-                    Can't find the answer you're looking for?
-                  </p>
+                  <h4 className="font-bold text-xl">{t.footer}</h4>
+                  <p className="text-sm text-neutral-500">{t.footerSub}</p>
                 </div>
 
                 <MainButton
-                  text="Contact Us"
+                  text={t.cta}
                   textcolor="text-black"
                   texthovercolor="text-white"
                   buttoncolor="bg-[#fff]"

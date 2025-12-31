@@ -60,7 +60,13 @@ const CloseIcon = () => {
   );
 };
 
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/constants/translations";
+
 const Blog = () => {
+  const { lang } = useLanguage();
+  const t = translations[lang].blog;
+  const blogsData = translations[lang].blogsData;
   const [active, setActive] = useState(null);
   const id = useId();
   const ref = useRef(null);
@@ -84,71 +90,25 @@ const Blog = () => {
 
   useOutsideClick(ref, () => setActive(null));
 
-  const blogs = [
-    {
-      id: 1,
-      title: "Top 10 Interior Design Trends for 2024",
-      description:
-        "Discover the hottest trends shaping home interiors this year, from sustainable materials to bold color palettes.",
-      image:
-        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      category: "Design Trends",
-      date: "Oct 24, 2023",
-      content: () => (
-        <p>
-          Sustainable materials are taking center stage in 2024. From reclaimed
-          wood to recycled glass, homeowners are looking for eco-friendly
-          interactions. Bold color palettes are also making a comeback, with
-          moodier tones replacing the all-white aesthetic.
-        </p>
-      ),
-      ctaText: "Read More",
-      ctaLink: "#",
-    },
-    {
-      id: 2,
-      title: "Maximizing Small Spaces",
-      description:
-        "Expert tips on how to make your compact apartment feel spacious and functional without compromising on style.",
-      image:
-        "https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      category: "Tips & Tricks",
-      date: "Nov 12, 2023",
-      content: () => (
-        <p>
-          Vertical storage is key in small spaces. Utilize wall-mounted shelves
-          and tall cabinets. Mirrors can also create the illusion of space.
-          Multi-functional furniture, like sofa beds and extendable tables, are
-          essential for maximizing utility.
-        </p>
-      ),
-      ctaText: "Read More",
-      ctaLink: "#",
-    },
-    {
-      id: 3,
-      title: "The Ultimate Guide to Kitchen Renovations",
-      description:
-        "Everything you need to know before starting your kitchen remodel, from budgeting to choosing the right materials.",
-      image:
-        "https://plus.unsplash.com/premium_photo-1733760124949-7d15ff2f677e?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      category: "Renovation Guide",
-      date: "Dec 05, 2023",
-      content: () => (
-        <p>
-          Planning is crucial. Start by defining your layout—galley, L-shaped,
-          or U-shaped. lighting plays a huge role; ensure you have task lighting
-          under cabinets. Don't skimp on quality hardware; it can make a budget
-          kitchen look high-end.
-        </p>
-      ),
-      ctaText: "Read More",
-      ctaLink: "#",
-    },
-  ];
+  const blogs = blogsData.map((blog) => ({
+    ...blog,
+    image:
+      blog.id === 1
+        ? "https://plus.unsplash.com/premium_photo-1661963540233-94097ba21f27?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        : blog.id === 2
+        ? "https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        : "https://plus.unsplash.com/premium_photo-1733760124949-7d15ff2f677e?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    content: () => <p>{blog.content}</p>,
+    ctaText: t.readMore,
+    ctaLink: "#",
+  }));
 
   return (
-    <section className="min-h-screen bg-white text-black w-full flex justify-center py-20">
+    <section
+      id="blog"
+      data-bg="white"
+      className="min-h-screen bg-white text-black w-full flex justify-center py-20"
+    >
       <AnimatePresence>
         {active && typeof active === "object" && (
           <motion.div
@@ -224,35 +184,40 @@ const Blog = () => {
 
       <Container>
         <div className="flex flex-col items-center justify-center">
-          <div className="flex flex-col gap-3 items-center justify-center">
-            <div className="flex items-center text-gray-400 justify-center gap-2">
+          <div className="flex flex-col gap-4 items-center justify-center text-center">
+            <div className="flex items-center text-gray-400 font-bold justify-center gap-2">
               <BackSvg />
-              <h1>Our Blog</h1>
+              <h1>{t.badge}</h1>
             </div>
             <div className="flex items-center justify-center">
-              <h1 className="text-6xl font-bold">Latest News & Insights</h1>
+              <h1 className="text-4xl md:text-6xl font-bold">{t.title}</h1>
             </div>
 
-            <div className="flex items-center w-[600px] justify-center">
-              <p className="text-center text-gray-500">
-                Stay updated with the latest trends, tips, and insights from the
-                world of interior design and architecture.
+            <div className="flex items-center max-w-[600px] w-full justify-center px-4">
+              <p className="text-center text-gray-500 text-lg">
+                {t.description}
               </p>
             </div>
           </div>
 
-          <ul className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-20 place-items-center">
+          <ul className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12 md:mt-20 place-items-center">
             {blogs.map((blog) => (
               <motion.div
                 layoutId={`card-${blog.title}-${id}`}
                 key={blog.id}
                 onClick={() => setActive(blog)}
-                className="flex relative w-[350px] h-[400px] flex-col items-center justify-start gap-4 cursor-pointer hover:scale-105 transition-transform duration-300"
+                className="flex relative w-full max-w-[350px] h-fit flex-col items-center justify-start gap-4 cursor-pointer hover:scale-105 transition-transform duration-300"
               >
-                <motion.div layoutId={`image-${blog.title}-${id}`}>
-                  <CustomShapeImage src={blog.image} width={350} height={300} />
-                </motion.div>
-                <div className="flex flex-col items-start justify-center w-full">
+                <div className="w-full">
+                  <motion.div layoutId={`image-${blog.title}-${id}`}>
+                    <CustomShapeImage
+                      src={blog.image}
+                      width={350}
+                      height={300}
+                    />
+                  </motion.div>
+                </div>
+                <div className="flex flex-col items-center md:items-start justify-center w-full px-2">
                   <motion.h1
                     layoutId={`title-${blog.title}-${id}`}
                     className="text-xl font-bold line-clamp-1 text-center md:text-left"

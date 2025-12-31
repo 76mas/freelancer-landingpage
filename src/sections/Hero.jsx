@@ -6,16 +6,26 @@ import { FaAnglesRight } from "react-icons/fa6";
 import { useState } from "react";
 import MainButton from "@/components/mainbutton";
 
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/constants/translations";
+
 const Hero = ({}) => {
+  const { lang } = useLanguage();
+  const t = translations[lang].hero;
+
   return (
-    <section className="w-full h-full min-h-screen flex items-center justify-center bg-black">
+    <section
+      id="hero"
+      data-bg="black"
+      className="w-full h-full min-h-screen flex items-center justify-center bg-black"
+    >
       <Container>
-        <div className="w-full h-full flex flex-col gap-[30px] mt-10  justify-center">
-          <div className="flex flex-col lg:flex-row items-end justify-between w-full h-full ">
-            <div className="flex flex-col items-start">
+        <div className="w-full h-full flex flex-col gap-8 md:gap-[30px] mt-24 md:mt-10 justify-center">
+          <div className="flex flex-col lg:flex-row items-center lg:items-end justify-between w-full h-full gap-8 lg:gap-0">
+            <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
               <SplitText
-                text="Make Your"
-                className="text-3xl md:text-6xl font-bold text-white text-start"
+                text={t.title1}
+                className="text-4xl md:text-6xl font-bold text-white px-2"
                 delay={100}
                 duration={0.6}
                 ease="power3.out"
@@ -24,11 +34,10 @@ const Hero = ({}) => {
                 to={{ opacity: 1, y: 0 }}
                 threshold={0.1}
                 rootMargin="-100px"
-                textAlign="left"
               />
               <SplitText
-                text="Home Beautiful"
-                className="text-3xl md:text-6xl font-bold text-white text-start"
+                text={t.title2}
+                className="text-4xl md:text-6xl font-bold text-white px-2"
                 delay={150}
                 duration={0.6}
                 ease="power3.out"
@@ -37,19 +46,16 @@ const Hero = ({}) => {
                 to={{ opacity: 1, y: 0 }}
                 threshold={0.1}
                 rootMargin="-100px"
-                textAlign="left"
               />
             </div>
 
-            <div className="w-full lg:w-1/2 flex flex-col items-end gap-6">
-              <p className="text-gray-300 text-right text-lg md:text-xl max-w-md">
-                We renovate kitchens, bathrooms, and{" "}
-                <br className="hidden md:block" />
-                bedrooms to make your home look amazing.
+            <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-end gap-6">
+              <p className="text-gray-300 text-center lg:text-right text-base md:text-xl max-w-md">
+                {t.description}
               </p>
 
               <MainButton
-                text="View Our Services"
+                text={t.cta}
                 textcolor="text-white"
                 texthovercolor="text-white"
                 buttoncolor="bg-[#000000]"
@@ -66,7 +72,6 @@ const Hero = ({}) => {
       </Container>
     </section>
   );
-  
 };
 
 export default Hero;

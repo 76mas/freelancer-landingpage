@@ -11,57 +11,29 @@ import { BiBath } from "react-icons/bi";
 import { LuSofa } from "react-icons/lu";
 import clsx from "clsx";
 
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/constants/translations";
+
 export default function BasicAccordion() {
-  const items = [
-    {
-      key: "1",
-      ariaLabel: "Bedroom Makeover",
-      title: "Bedroom Makeover",
-      icon: <IoBedOutline className="text-xl" />,
-      content:
-        "Create your perfect retreat with new paint, quality flooring, built-in storage, and ambient lighting. We design comfortable, stylish bedrooms where you'll love waking up and unwinding after long days.",
-    },
-    {
-      key: "2",
-      ariaLabel: "Kitchen Renovation",
-      title: "Kitchen Renovation",
-      icon: <IoRestaurantOutline className="text-xl" />, // Close enough to fork/knife
-      content:
-        "Transform your kitchen into a culinary haven with modern appliances, custom cabinetry, and durable countertops. We create functional and beautiful spaces for cooking and entertaining.",
-    },
-    {
-      key: "3",
-      ariaLabel: "Bathroom Remodeling",
-      title: "Bathroom Remodeling",
-      icon: <BiBath className="text-xl" />,
-      content:
-        "Upgrade your bathroom with spa-like features, elegant fixtures, and efficient layouts. From master baths to powder rooms, we enhance comfort and value.",
-    },
-    {
-      key: "4",
-      ariaLabel: "Living Room Refresh",
-      title: "Living Room Refresh",
-      icon: <LuSofa className="text-xl" />,
-      content:
-        "Revitalize your living space with tailored furniture layouts, accent walls, and lighting solutions. We create inviting atmospheres for relaxation and social gatherings.",
-    },
-    {
-      key: "5",
-      ariaLabel: "Home Office Setup",
-      title: "Home Office Setup",
-      icon: <IoDesktopOutline className="text-xl" />,
-      content:
-        "Boost productivity with a custom home office designed for your workflow. We focus on ergonomics, lighting, and storage to create an inspiring workspace.",
-    },
-    {
-      key: "6",
-      ariaLabel: "Outdoor Patio Design",
-      title: "Outdoor Patio Design",
-      icon: <IoLeafOutline className="text-xl" />,
-      content:
-        "Extend your living space outdoors with a beautifully designed patio. We incorporate landscaping, seating, and lighting to create the perfect alfresco retreat.",
-    },
+  const { lang } = useLanguage();
+  const t = translations[lang].accordion;
+
+  const icons = [
+    <IoBedOutline className="text-xl" />,
+    <IoRestaurantOutline className="text-xl" />,
+    <BiBath className="text-xl" />,
+    <LuSofa className="text-xl" />,
+    <IoDesktopOutline className="text-xl" />,
+    <IoLeafOutline className="text-xl" />,
   ];
+
+  const items = t.map((item, index) => ({
+    key: (index + 1).toString(),
+    ariaLabel: item.title,
+    title: item.title,
+    icon: icons[index],
+    content: item.content,
+  }));
 
   return (
     <Accordion

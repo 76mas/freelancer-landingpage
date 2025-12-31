@@ -1,3 +1,4 @@
+"use client";
 import Container from "@/components/Continor";
 import CustomShapeImage from "@/components/CustomShapeImage";
 import MainButton from "@/components/mainbutton";
@@ -202,73 +203,78 @@ const AboutIcon = () => {
   );
 };
 
-const ArrayCard = [
-  {
-    number: 13,
-    afterNumber: "+",
-    title: "Years of Experience",
-    icon: <ArrowSvg />,
-  },
-  {
-    number: 250,
-    afterNumber: "+",
-    title: "quality projects completed",
-    icon: <BackSvg />,
-  },
-  {
-    number: 9,
-    afterNumber: "m",
-    title: "Total satisfied clients",
-    icon: <FolderSvg />,
-  },
-  {
-    number: 6,
-    afterNumber: "k",
-    title: "Happy clients",
-    icon: <HomeSvg />,
-  },
-];
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/constants/translations";
 
 const About = () => {
+  const { lang } = useLanguage();
+  const t = translations[lang].about;
+
+  const ArrayCard = [
+    {
+      number: 13,
+      afterNumber: "+",
+      title: t.stats.experience,
+      icon: <ArrowSvg />,
+    },
+    {
+      number: 250,
+      afterNumber: "+",
+      title: t.stats.projects,
+      icon: <BackSvg />,
+    },
+    {
+      number: 9,
+      afterNumber: "m",
+      title: t.stats.satisfied,
+      icon: <FolderSvg />,
+    },
+    {
+      number: 6,
+      afterNumber: "k",
+      title: t.stats.happy,
+      icon: <HomeSvg />,
+    },
+  ];
+
   return (
-    <section className="w-full h-full min-h-screen flex  justify-center items-center ">
-    
-    
+    <section
+      id="about"
+      data-bg="white"
+      className="w-full h-full min-h-screen flex  justify-center items-center "
+    >
       <Container>
-        <div className="flex flex-col gap-3 justify-between items-center ">
-          
-          <div className="w-full h-full grid grid-cols-2 items-start justify-between gap-3   ">
-            <h2 className="text-md font-bold text-[#4e4e4e] gap-2 w-full flex text-start pl-3">
-              <AboutIcon /> About Us
+        <div className="flex flex-col gap-12 md:gap-3 justify-between items-center py-20 md:py-0">
+          <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2 items-start justify-between gap-8 lg:gap-3">
+            <h2 className="text-md font-bold text-[#4e4e4e] gap-2 w-full flex justify-center lg:justify-start lg:pl-3">
+              <AboutIcon /> {t.badge}
             </h2>
 
-            <div className="flex flex-col gap-3">
-              <h1 className="text-3xl font-bold text-black">Who We Are</h1>
-              <p className="text-gray-500">
-                With over 13 years of experience, we are a leading home
-                renovation company that specializes in kitchens, bathrooms, and
-                bedrooms.
-              </p>
+            <div className="flex flex-col gap-3 text-center lg:text-left">
+              <h1 className="text-4xl md:text-5xl font-bold text-black">
+                {t.title}
+              </h1>
+              <p className="text-gray-500 text-lg">{t.description}</p>
             </div>
           </div>
 
-
-
-          <div className="grid grid-cols-2 w-full h-ful  items-center justify-between ">
-            <div className="w-[90%] h-full ">
-              <CustomShapeImage
-                width={500}
-                height={400}
-                src="https://images.unsplash.com/photo-1759337283317-a452c486d79a?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8"
-              />
+          <div className="grid grid-cols-1 lg:grid-cols-2 w-full h-full items-center justify-between gap-12 lg:gap-0">
+            <div className="w-full lg:w-[90%] flex justify-center lg:block">
+              <div className="w-full max-w-[500px]">
+                <CustomShapeImage
+                  width={500}
+                  height={400}
+                  src="https://images.unsplash.com/photo-1759337283317-a452c486d79a?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8"
+                />
+              </div>
             </div>
 
-            <div className="flex flex-col gap-10 h-full  items-start w-full">
-              <div className="grid grid-cols-2 gap-3">
+            <div className="flex flex-col gap-10 h-full items-center lg:items-start w-full">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {ArrayCard.map((item, index) => (
                   <div
                     key={index}
-                    className="flex flex-col gap-4 hover:shadow-md transition-all duration-300 items-start justify-center bg-[#f6f5fa] p-6 rounded-3xl"
+                    className="flex flex-col gap-4 hover:shadow-md transition-all duration-300 items-start justify-center bg-[#f6f5fa] p-8 rounded-3xl w-full"
                   >
                     <div className="flex items-center gap-4">
                       {item.icon}
@@ -290,9 +296,9 @@ const About = () => {
                 ))}
               </div>
 
-              <div className="flex items-center gap-2 justify-start">
+              <div className="flex flex-col sm:flex-row items-center gap-6 justify-start w-full">
                 <MainButton
-                  text="View Our Services"
+                  text={t.cta}
                   textcolor="text-black"
                   texthovercolor="text-white"
                   buttoncolor="bg-[#fff]"
@@ -300,26 +306,23 @@ const About = () => {
                   backgroundcolor="bg-[#000]"
                 />
 
-                <div className="flex items-center gap-2">
-                  <div className="flex items-center justify-center  bg-[#f6f5fa] p-3 rounded-full">
+                <div className="flex items-center gap-4">
+                  <div className="flex items-center justify-center bg-[#f6f5fa] p-4 rounded-full">
                     <Conect />
                   </div>
 
                   <div className="flex flex-col text-[#4e4e4e]">
-                    <p>Call Us</p>
-                    <p>+964 772 7488 537</p>
+                    <p className="font-semibold text-sm">{t.callUs}</p>
+                    <p className="text-lg font-bold" dir="ltr">
+                      +964 772 7488 537
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-
         </div>
       </Container>
-
-
-
     </section>
   );
 };

@@ -4,7 +4,7 @@ const CustomShapeVideo = ({ src }) => {
   const clipId = useId();
 
   return (
-    <div className="w-full h-[400px]">
+    <div className="w-full h-[250px] md:h-[400px]">
       <svg width="0" height="0">
         <defs>
           <clipPath id={clipId} clipPathUnits="objectBoundingBox">

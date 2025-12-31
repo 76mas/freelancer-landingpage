@@ -1,3 +1,4 @@
+"use client";
 import BasicAccordion from "@/components/acording";
 import Container from "@/components/Continor";
 import CustomShapeImage from "@/components/CustomShapeImage";
@@ -34,107 +35,77 @@ const BackSvg = () => {
   );
 };
 
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/constants/translations";
+
 const Projects = () => {
-  const projects = [
-    {
-      id: 1,
-      title: "Modern Loft Renovation",
-      description:
-        "A complete transformation of an industrial loft into a warm, modern living space. Features include a custom kitchen island, open-concept layout, and smart home integration.",
-      year: "2023",
-      image:
-        "https://plus.unsplash.com/premium_photo-1676968002777-879538ec5601?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      category: "Interior Design",
-    },
-    {
-      id: 2,
-      title: "Coastal Villa Landscape",
-      description:
-        "Designed a serene outdoor oasis for a luxury villa. Includes a custom pool deck, drought-resistant landscaping, and ambient lighting for evening entertainment.",
-      year: "2024",
-      image:
-        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      category: "Landscaping",
-    },
-    {
-      id: 3,
-      title: "Urban Office Space",
-      description:
-        "Revamped a downtown corporate office to foster collaboration and productivity. Custom ergonomic furniture, acoustic solutions, and vibrant break areas.",
-      year: "2022",
-      image:
-        "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      category: "Commercial",
-    },
-    {
-      id: 4,
-      title: "Minimalist Kitchen",
-      description:
-        "A sleek, functional kitchen design maximizing storage and style. Matte black cabinetry, quartz countertops, and hidden appliances define this modern space.",
-      year: "2023",
-      image:
-        "https://images.unsplash.com/photo-1716829094982-345e699674cd?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      category: "Renovation",
-    },
-  ];
+  const { lang } = useLanguage();
+  const t = translations[lang].projects;
+  const projectsData = translations[lang].projectsData;
 
   return (
-    <section className="min-h-screen bg-black text-white w-full flex justify-center py-20">
+    <section
+      id="projects"
+      data-bg="black"
+      className="min-h-screen bg-black text-white w-full flex justify-center py-20"
+    >
       <Container>
         <div className="flex flex-col items-center justify-center">
-          <div className="flex flex-col gap-3 items-center justify-center">
-            <div className="flex items-center text-gray-200 justify-center gap-2">
+          <div className="flex flex-col gap-4 items-center justify-center text-center">
+            <div className="flex items-center text-[#4e4e4e] font-bold justify-center gap-2">
               <BackSvg />
-              <h1>Our Projects</h1>
+              <h1>{t.badge}</h1>
             </div>
             <div className="flex items-center justify-center">
-              <h1 className="text-6xl font-bold">Our Recent Projects</h1>
+              <h1 className="text-4xl md:text-6xl font-bold">{t.title}</h1>
             </div>
 
-            <div className="flex items-center w-[600px] justify-center">
-              <p className="text-center text-gray-100">
-                See how we transform spaces with our creative designs and expert
-                craftsmanship. Let us bring your vision to life. The projects
-                below showcase our commitment to quality and creativity.
+            <div className="flex items-center max-w-[600px] w-full justify-center px-4">
+              <p className="text-center text-gray-300 text-lg">
+                {t.description}
               </p>
             </div>
           </div>
 
-          <div className="flex items-center w-full flex-col gap-20 mt-20">
-            {projects.map((project, index) => (
+          <div className="flex items-center w-full flex-col gap-12 lg:gap-20 mt-12 lg:mt-20">
+            {projectsData.map((project, index) => (
               <div
                 key={project.id}
-                className={`flex items-center h-full w-full justify-between gap-10 ${
-                  index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+                className={`flex flex-col lg:flex-row items-center h-full w-full justify-between gap-10 ${
+                  index % 2 === 0 ? "" : "lg:flex-row-reverse"
                 }`}
               >
                 <div className="flex items-center w-full justify-center">
-                  <CustomShapeImage
-                    src={project.image}
-                    width={500}
-                    height={400}
-                  />
+                  <div className="w-full max-w-[500px]">
+                    <CustomShapeImage
+                      src={project.image}
+                      width={500}
+                      height={400}
+                    />
+                  </div>
                 </div>
 
-                <div className="flex flex-col w-full border-t border-gray-700 p-5 h-full items-start justify-between min-h-[300px]">
-                  <div className="flex flex-col items-start gap-4">
-                    <div className="bg-[#cc8f00] px-4 py-1 rounded-full text-sm font-semibold text-black uppercase tracking-wider">
+                <div className="flex flex-col w-full border-t border-gray-800 p-5 h-full items-start justify-between min-h-fit lg:min-h-[300px]">
+                  <div className="flex flex-col items-start gap-4 w-full">
+                    <div className="bg-[#cc8f00] px-4 py-1 rounded-full text-xs md:text-sm font-semibold text-black uppercase tracking-wider">
                       {project.category}
                     </div>
-                    <h1 className="text-4xl font-bold">{project.title}</h1>
+                    <h1 className="text-2xl md:text-4xl font-bold">
+                      {project.title}
+                    </h1>
                   </div>
 
-                  <p className="text-gray-300 text-lg leading-relaxed mt-4">
+                  <p className="text-gray-300 text-base md:text-lg leading-relaxed mt-4">
                     {project.description}
                   </p>
 
                   <div className="w-full flex items-center justify-between mt-8">
-                    <div className="flex items-center justify-center w-[120px] h-[50px] rounded-lg bg-[#1d1d1d] border border-gray-800">
-                      <span className="text-gray-400 font-mono">
+                    <div className="flex items-center justify-center w-[100px] md:w-[120px] h-[40px] md:h-[50px] rounded-lg bg-[#1d1d1d] border border-gray-800">
+                      <span className="text-gray-400 font-mono text-sm md:text-base">
                         0{index + 1}
                       </span>
                     </div>
-                    <div className="text-xl font-bold text-[#cc8f00]">
+                    <div className="text-lg md:text-xl font-bold text-[#cc8f00]">
                       {project.year}
                     </div>
                   </div>

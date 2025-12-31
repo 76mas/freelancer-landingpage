@@ -2,9 +2,12 @@
 import { Accordion, AccordionItem } from "@heroui/react";
 import { IoChevronForward } from "react-icons/io5";
 
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/constants/translations";
+
 export default function AcordingFq() {
-  const defaultContent =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+  const { lang } = useLanguage();
+  const t = translations[lang].faqs;
 
   return (
     <Accordion
@@ -18,48 +21,16 @@ export default function AcordingFq() {
           "text-neutral-400 group-data-[open=true]:rotate-90 transition-transform duration-300",
       }}
     >
-      <AccordionItem
-        key="1"
-        aria-label="What is the refund policy?"
-        title="What is the refund policy?"
-        indicator={<IoChevronForward size={18} />}
-      >
-        {defaultContent}
-      </AccordionItem>
-
-      <AccordionItem
-        key="4"
-        aria-label="What is the refund policy?"
-        title="What is the refund policy?"
-        indicator={<IoChevronForward size={18} />}
-      >
-        {defaultContent}
-      </AccordionItem>
-
-      <AccordionItem
-        key="6"
-        aria-label="What is the refund policy?"
-        title="What is the refund policy?"
-        indicator={<IoChevronForward size={18} />}
-      >
-        {defaultContent}
-      </AccordionItem>
-      <AccordionItem
-        key="2"
-        aria-label="How do I track my order?"
-        title="How do I track my order?"
-        indicator={<IoChevronForward size={18} />}
-      >
-        {defaultContent}
-      </AccordionItem>
-      <AccordionItem
-        key="3"
-        aria-label="Can I change my subscription plan?"
-        title="Can I change my subscription plan?"
-        indicator={<IoChevronForward size={18} />}
-      >
-        {defaultContent}
-      </AccordionItem>
+      {t.map((faq, index) => (
+        <AccordionItem
+          key={index}
+          aria-label={faq.question}
+          title={faq.question}
+          indicator={<IoChevronForward size={18} />}
+        >
+          {faq.answer}
+        </AccordionItem>
+      ))}
     </Accordion>
   );
 }
