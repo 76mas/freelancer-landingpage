@@ -73,6 +73,7 @@ const Fqa = () => {
 
                 <MainButton
                   text={t.cta}
+                  href="whatsapp://send?phone=+9647727488537"
                   textcolor="text-black"
                   texthovercolor="text-white"
                   buttoncolor="bg-[#fff]"

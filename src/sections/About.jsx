@@ -299,6 +299,7 @@ const About = () => {
               <div className="flex flex-col sm:flex-row items-center gap-6 justify-start w-full">
                 <MainButton
                   text={t.cta}
+                  href="whatsapp://send?phone=+9647727488537"
                   textcolor="text-black"
                   texthovercolor="text-white"
                   buttoncolor="bg-[#fff]"

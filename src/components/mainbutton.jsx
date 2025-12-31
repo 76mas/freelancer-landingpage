@@ -11,10 +11,12 @@ const MainButton = ({
   buttonhovercolor,
   backgroundcolor,
   iconcolor,
+  href,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <button
+    <a
+      href={href}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={`group relative flex cursor-pointer z-10 items-center overflow-hidden justify-between gap-4 p-1 pr-9 rounded-full ${backgroundcolor} transition-all duration-300`}
@@ -53,7 +55,7 @@ const MainButton = ({
       >
         <FaAnglesRight className="w-5 h-5" />
       </div>
-    </button>
+    </a>
   );
 };
 

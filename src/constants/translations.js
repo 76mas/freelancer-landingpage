@@ -27,7 +27,7 @@ export const translations = {
         satisfied: "Total satisfied clients",
         happy: "Happy clients",
       },
-      cta: "View Our Services",
+      cta: "Contact Us Now",
       callUs: "Call Us",
     },
     services: {
@@ -227,7 +227,7 @@ export const translations = {
         satisfied: "إجمالي العملاء الراضين",
         happy: "عملاء سعداء",
       },
-      cta: "عرض خدماتنا",
+      cta: "اتصل بنا الآن",
       callUs: "اتصل بنا",
     },
     services: {
