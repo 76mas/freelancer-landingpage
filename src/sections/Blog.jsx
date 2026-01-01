@@ -193,7 +193,7 @@ const Blog = () => {
                 </div>
               </motion.div>
 
-              <div className="mt-3 text-center md:text-left">
+              <div className="mt-3 text-start ">
                 <motion.h3
                   layoutId={`title-${blog.id}`}
                   className="font-bold text-black"
