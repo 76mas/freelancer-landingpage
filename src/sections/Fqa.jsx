@@ -52,7 +52,7 @@ const Fqa = () => {
             </p>
           </div>
 
-          <div className="w-full h-fit grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-start lg:items-center px-4">
+          <div className="w-full h-fit grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-start lg:items-center ">
             <div className="relative w-full flex justify-center lg:block">
               <div className="w-full max-w-[500px]">
                 <CustomShapeImage
