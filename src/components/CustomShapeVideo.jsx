@@ -17,7 +17,6 @@ const CustomShapeVideo = ({ src }) => {
       </svg>
 
       <video
-        src={"/demo.mp4"}
         autoPlay
         muted
         loop
@@ -28,7 +27,10 @@ const CustomShapeVideo = ({ src }) => {
           WebkitClipPath: `url(#${clipId})`,
         }}
         poster="https://images.unsplash.com/photo-1498409505433-aff66f7ba9e6?q=80&w=2060&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      />
+      >
+        <source src="/demo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
   );
 };
