@@ -4,7 +4,10 @@ import { AnimatePresence, motion } from "motion/react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import Container from "@/components/Continor";
 import CustomShapeImage from "@/components/CustomShapeImage";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/constants/translations";
 
+/* ---------------- Icons ---------------- */
 const BackSvg = () => {
   return (
     <svg
@@ -36,53 +39,45 @@ const BackSvg = () => {
   );
 };
 
-const CloseIcon = () => {
-  return (
-    <motion.svg
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0, transition: { duration: 0.05 } }}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-4 w-4 text-black"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M18 6l-12 12" />
-      <path d="M6 6l12 12" />
-    </motion.svg>
-  );
-};
+const CloseIcon = () => (
+  <motion.svg
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0, transition: { duration: 0.05 } }}
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="h-4 w-4 text-black"
+  >
+    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+    <path d="M18 6l-12 12" />
+    <path d="M6 6l12 12" />
+  </motion.svg>
+);
 
-import { useLanguage } from "@/context/LanguageContext";
-import { translations } from "@/constants/translations";
+/* ---------------- Component ---------------- */
 
 const Blog = () => {
   const { lang } = useLanguage();
   const t = translations[lang].blog;
   const blogsData = translations[lang].blogsData;
+
   const [active, setActive] = useState(null);
   const id = useId();
   const ref = useRef(null);
 
+  /* -------- Escape + Scroll Lock -------- */
   useEffect(() => {
-    function onKeyDown(event) {
-      if (event.key === "Escape") {
-        setActive(null);
-      }
-    }
+    const onKeyDown = (e) => e.key === "Escape" && setActive(null);
 
-    if (active && typeof active === "object") {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    document.body.style.overflow =
+      active && typeof active === "object" ? "hidden" : "auto";
 
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
@@ -90,154 +85,132 @@ const Blog = () => {
 
   useOutsideClick(ref, () => setActive(null));
 
+  /* -------- Normalize Data -------- */
   const blogs = blogsData.map((blog) => ({
     ...blog,
     image:
       blog.id === 1
-        ? "https://plus.unsplash.com/premium_photo-1661963540233-94097ba21f27?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ? "https://plus.unsplash.com/premium_photo-1661963540233-94097ba21f27"
         : blog.id === 2
-        ? "https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        : "https://plus.unsplash.com/premium_photo-1733760124949-7d15ff2f677e?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        ? "https://images.unsplash.com/photo-1493809842364-78817add7ffb"
+        : "https://plus.unsplash.com/premium_photo-1733760124949-7d15ff2f677e",
     content: () => <p>{blog.content}</p>,
-    ctaText: t.readMore,
-    ctaLink: "#",
   }));
 
   return (
-    <section
-      id="blog"
-      data-bg="white"
-      className="min-h-screen bg-white text-black w-full flex justify-center py-20"
-    >
+    <section id="blog" data-bg="white" className="min-h-screen bg-white py-20">
+      {/* Overlay */}
       <AnimatePresence>
-        {active && typeof active === "object" && (
+        {active && (
           <motion.div
+            className="fixed inset-0 bg-black/20 z-10"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/20 h-full w-full z-10"
           />
         )}
       </AnimatePresence>
+
+      {/* Modal */}
       <AnimatePresence>
-        {active && typeof active === "object" ? (
-          <div className="fixed inset-0 grid place-items-center z-[100]">
+        {active && (
+          <div className="fixed inset-0 grid  place-items-center z-[100]">
             <motion.button
-              key={`button-${active.title}-${id}`}
-              layout
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0, transition: { duration: 0.05 } }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
+              className="absolute top-3 right-3 bg-white rounded-full h-7 w-7 grid place-items-center"
               onClick={() => setActive(null)}
             >
               <CloseIcon />
             </motion.button>
+
             <motion.div
-              layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px] h-full md:h-fit md:max-h-[90%] flex flex-col bg-black dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              layoutId={`card-${active.id}`}
+              className="w-full max-w-[500px] h-[calc(100vh-4rem)] bg-black text-white rounded-3xl overflow-hidden"
             >
-              <motion.div layoutId={`image-${active.title}-${id}`}>
-                <img
-                  src={active.image}
-                  alt={active.title}
-                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
-                />
+              <motion.div layoutId={`image-${active.id}`}>
+                <img src={active.image} className="w-full h-80 object-cover" />
               </motion.div>
 
-              <div>
-                <div className="flex justify-between items-start p-4">
-                  <div className="">
-                    <motion.h3
-                      layoutId={`title-${active.title}-${id}`}
-                      className="font-bold text-neutral-100 dark:text-neutral-200 text-base"
-                    >
-                      {active.title}
-                    </motion.h3>
-                    <motion.p
-                      layoutId={`description-${active.description}-${id}`}
-                      className="text-neutral-400 dark:text-neutral-400 text-base"
-                    >
-                      {active.description}
-                    </motion.p>
-                  </div>
-                </div>
-                <div className="pt-4 relative px-4">
-                  <motion.div
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="text-neutral-400 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
-                  >
-                    {typeof active.content === "function"
-                      ? active.content()
-                      : active.content}
-                  </motion.div>
+              <div className="p-4">
+                <motion.h3
+                  layoutId={`title-${active.id}`}
+                  className="text-lg text-white font-bold"
+                >
+                  {active.title}
+                </motion.h3>
+
+                <motion.p
+                  layoutId={`description-${active.id}`}
+                  className="text-sm text-gray-400"
+                >
+                  {active.description}
+                </motion.p>
+
+                <div className="mt-4 text-sm text-gray-300 max-h-40">
+                  {active.content()}
                 </div>
               </div>
             </motion.div>
           </div>
-        ) : null}
+        )}
       </AnimatePresence>
 
+      {/* Cards */}
       <Container>
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col gap-4 items-center justify-center text-center">
-            <div className="flex items-center text-gray-400 font-bold justify-center gap-2">
+            <div className="flex items-center text-gray-900 font-bold justify-center gap-2">
               <BackSvg />
               <h1>{t.badge}</h1>
             </div>
             <div className="flex items-center justify-center">
-              <h1 className="text-4xl md:text-6xl font-bold">{t.title}</h1>
+              <h1 className="text-4xl text-black md:text-6xl font-bold">
+                {t.title}
+              </h1>
             </div>
 
             <div className="flex items-center max-w-[600px] w-full justify-center px-4">
-              <p className="text-center text-gray-500 text-lg">
+              <p className="text-center text-gray-900 text-lg">
                 {t.description}
               </p>
             </div>
           </div>
+        </div>
 
-          <ul className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12 md:mt-20 place-items-center">
-            {blogs.map((blog) => (
-              <motion.div
-                layoutId={`card-${blog.title}-${id}`}
-                key={blog.id}
-                onClick={() => setActive(blog)}
-                className="flex relative w-full max-w-[350px] h-fit flex-col items-center justify-start gap-4 cursor-pointer hover:scale-105 transition-transform duration-300"
-              >
-                <div className="w-full">
-                  <motion.div layoutId={`image-${blog.title}-${id}`}>
-                    <CustomShapeImage
-                      src={blog.image}
-                      width={350}
-                      height={300}
-                    />
-                  </motion.div>
-                </div>
-                <div className="flex flex-col items-center md:items-start justify-center w-full px-2">
-                  <motion.h1
-                    layoutId={`title-${blog.title}-${id}`}
-                    className="text-xl font-bold line-clamp-1 text-center md:text-left"
-                  >
-                    {blog.title}
-                  </motion.h1>
-                  <motion.p
-                    layoutId={`description-${blog.description}-${id}`}
-                    className="text-gray-600 text-sm line-clamp-2 text-center md:text-left"
-                  >
-                    {blog.description}
-                  </motion.p>
-                </div>
-                <div className="absolute top-4 left-4 p-2 px-4 bg-[#cc8f00] text-white text-xs font-bold rounded-full uppercase z-10">
+        <ul className="grid grid-cols-1 mt-20 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {blogs.map((blog) => (
+            <motion.li
+              key={blog.id}
+              layoutId={`card-${blog.id}`}
+              onClick={() => setActive(blog)}
+              className="cursor-pointer hover:scale-105 transition"
+            >
+              <motion.div layoutId={`image-${blog.id}`}>
+                <CustomShapeImage src={blog.image} width={350} height={300} />
+
+                <div className="absolute top-4 left-4 p-2 px-4 bg-[#cc8f00] transition-all duration-300 ease-in-out text-white text-xs font-bold rounded-full uppercase z-10">
                   {blog.category}
                 </div>
               </motion.div>
-            ))}
-          </ul>
-        </div>
+
+              <div className="mt-3 text-center md:text-left">
+                <motion.h3
+                  layoutId={`title-${blog.id}`}
+                  className="font-bold text-black"
+                >
+                  {blog.title}
+                </motion.h3>
+
+                <motion.p
+                  layoutId={`description-${blog.id}`}
+                  className="text-sm text-gray-500"
+                >
+                  {blog.description}
+                </motion.p>
+              </div>
+            </motion.li>
+          ))}
+        </ul>
       </Container>
     </section>
   );
