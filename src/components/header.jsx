@@ -143,7 +143,7 @@ const Header = () => {
                       activeSection === link.href.replace("#", "")
                         ? "text-yellow-500"
                         : themeClasses.text
-                    } hover:text-yellow-500 font-bold text-sm transition-colors duration-500`}
+                    } hover:text-yellow-500  cursor-pointer font-bold text-sm transition-colors duration-500`}
                   >
                     {link.label}
                   </button>
