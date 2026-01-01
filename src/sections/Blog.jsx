@@ -185,7 +185,7 @@ const Blog = () => {
               onClick={() => setActive(blog)}
               className="cursor-pointer hover:scale-105 transition"
             >
-              <motion.div layoutId={`image-${blog.id}`}>
+              <motion.div layoutId={`image-${blog.id}`} className="relative">
                 <CustomShapeImage src={blog.image} width={350} height={300} />
 
                 <div className="absolute top-4 left-4 p-2 px-4 bg-[#cc8f00] transition-all duration-300 ease-in-out text-white text-xs font-bold rounded-full uppercase z-10">
