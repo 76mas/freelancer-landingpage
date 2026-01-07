@@ -12,11 +12,13 @@ const MainButton = ({
   backgroundcolor,
   iconcolor,
   href,
+  target,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
     <a
       href={href}
+      target={target}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={`group relative flex cursor-pointer z-10 items-center overflow-hidden justify-between gap-4 p-1 pr-9 rounded-full ${backgroundcolor} transition-all duration-300`}

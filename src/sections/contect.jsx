@@ -6,6 +6,7 @@ import {
   IoLocationOutline,
   IoChevronForwardOutline,
 } from "react-icons/io5";
+import MainButton from "@/components/mainbutton";
 
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/constants/translations";
@@ -59,8 +60,7 @@ const Contect = () => {
             </div>
           </div>
 
-          {/* Right Column: Form */}
-          <div className="bg-black border border-gray-800 rounded-[40px] overflow-hidden shadow-sm h-full min-h-[500px]">
+          <div className="relative group bg-black border border-gray-800 rounded-[40px] overflow-hidden shadow-sm h-full min-h-[500px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3334.5420228990533!2d44.35067278480455!3d33.30464248081599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDE4JzE2LjciTiA0NMKwMjAnNTQuNSJF!5e0!3m2!1sar!2siq!4v1767782242530!5m2!1sar!2siq"
               width="100%"
@@ -71,6 +71,19 @@ const Contect = () => {
               referrerPolicy="no-referrer-when-downgrade"
               className="w-full h-full"
             ></iframe>
+            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center z-10 backdrop-blur-[2px] pointer-events-none group-hover:pointer-events-auto">
+              <MainButton
+                text={lang === "ar" ? "عرض الموقع" : "View Location"}
+                href="https://maps.google.com/?q=33.30464248081599,44.35067278480455"
+                target="_blank"
+                textcolor="text-white"
+                texthovercolor="text-white"
+                buttoncolor="bg-[#000000]"
+                buttonhovercolor="bg-[#966106]"
+                backgroundcolor="bg-[#966106]"
+                iconcolor="text-white"
+              />
+            </div>
           </div>
         </div>
       </Container>

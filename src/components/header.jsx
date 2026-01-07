@@ -113,7 +113,10 @@ const Header = () => {
   ];
 
   return (
-    <div className="w-full h-[120px] md:h-[200px] fixed top-0 left-0 z-50 flex items-center justify-center transition-all duration-500">
+    <div
+      dir="ltr"
+      className="w-full h-[120px] md:h-[200px] fixed top-0 left-0 z-50 flex items-center justify-center transition-all duration-500"
+    >
       <Container>
         <div className="flex items-center justify-between relative z-60">
           <div
@@ -125,10 +128,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden min-[980px]:flex items-start justify-center ">
             {/* Left Wing (Flipped SVGR in LTR, Normal in RTL) */}
-            <SVGR
-              className={`${lang === "ar" ? "" : "scale-x-[-1]"} `}
-              fill={themeClasses.fill}
-            />
+            <SVGR className="scale-x-[-1]" fill={themeClasses.fill} />
 
             {/* Center Content */}
             <div
@@ -152,10 +152,7 @@ const Header = () => {
             </div>
 
             {/* Right Wing (Normal in LTR, Flipped in RTL) */}
-            <SVGR
-              fill={themeClasses.fill}
-              className={`${lang === "ar" ? "scale-x-[-1]" : ""} `}
-            />
+            <SVGR fill={themeClasses.fill} className="" />
           </div>
 
           <div className="flex items-center justify-center gap-4">
