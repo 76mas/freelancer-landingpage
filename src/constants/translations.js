@@ -6,26 +6,26 @@ export const translations = {
       projects: "Projects",
       pricing: "Pricing",
       blog: "Blog",
-      faq: "Faq",
+      faq: "FAQ",
       contact: "Contact us",
     },
     hero: {
-      title1: "Make Your",
-      title2: "Home Beautiful",
+      title1: "Your Trusted",
+      title2: "Real Estate Partner",
       description:
-        "We renovate kitchens, bathrooms, and bedrooms to make your home look amazing.",
+        "We help individuals and companies make clear and safe real estate decisions, from the first contact to the completion of the deal.",
       cta: "View Our Services",
     },
     about: {
       badge: "About Us",
       title: "Who We Are",
       description:
-        "With over 13 years of experience, we are a leading home renovation company that specializes in kitchens, bathrooms, and bedrooms.",
+        "We provide integrated real estate services starting from buying and selling lands and orchards, through preparing maps, construction and restoration works, to limited contracting and following up on real estate registration transactions.",
       stats: {
         experience: "Years of Experience",
-        projects: "quality projects completed",
-        satisfied: "Total satisfied clients",
-        happy: "Happy clients",
+        projects: "Real Estate Sales & Purchases",
+        satisfied: "Areas We Serve",
+        happy: "Real Estate Consultations",
       },
       cta: "Contact Us Now",
       callUs: "Call Us",
@@ -34,7 +34,7 @@ export const translations = {
       badge: "Our Services",
       title: "What We Do",
       description:
-        "From kitchens to patios, we transform every space in your home with expert craftsmanship and creative designs.",
+        "From the idea to ownership, we provide you with an organized and safe real estate experience in all its details.",
     },
     projects: {
       badge: "Our Projects",
@@ -62,13 +62,14 @@ export const translations = {
     contact: {
       badge: "Contact",
       title: "Contact Us",
-      description: "Fill out the form below and we will get right back to you!",
+      description: "Do not hesitate to contact us, we are here to help you.",
       firstName: "First Name",
       lastName: "Last Name",
       email: "Email",
       phone: "Phone",
       message: "Your Message",
       submit: "Submit",
+      location: "Baghdad Al-Mansour Beirut Street",
     },
     projectsData: [
       {
@@ -114,56 +115,72 @@ export const translations = {
     ],
     accordion: [
       {
-        title: "Bedroom Makeover",
+        title: "Property Sales",
         content:
-          "Create your perfect retreat with new paint, quality flooring, built-in storage, and ambient lighting. We design comfortable, stylish bedrooms where you'll love waking up and unwinding after long days.",
+          "We help you sell your property at the right price and with clear and safe procedures that guarantee your rights and facilitate the sales process from start to finish.",
       },
       {
-        title: "Kitchen Renovation",
+        title: "Property Purchase",
         content:
-          "Transform your kitchen into a culinary haven with modern appliances, custom cabinetry, and durable countertops. We create functional and beautiful spaces for cooking and entertaining.",
+          "We provide well-studied options that suit your needs and budget without complexity, with full support throughout the purchase stages.",
       },
       {
-        title: "Bathroom Remodeling",
+        title: "Residential Real Estate",
         content:
-          "Upgrade your bathroom with spa-like features, elegant fixtures, and efficient layouts. From master baths to powder rooms, we enhance comfort and value.",
+          "Carefully selected apartments and houses for personal use or investment, with a real evaluation of location and value.",
       },
       {
-        title: "Living Room Refresh",
+        title: "Commercial Real Estate",
         content:
-          "Revitalize your living space with tailored furniture layouts, accent walls, and lighting solutions. We create inviting atmospheres for relaxation and social gatherings.",
+          "Shops, offices, and commercial buildings that support your long-term goals and suit various investment activities.",
       },
       {
-        title: "Home Office Setup",
+        title: "Agricultural Lands",
         content:
-          "Boost productivity with a custom home office designed for your workflow. We focus on ergonomics, lighting, and storage to create an inspiring workspace.",
+          "Agricultural lands suitable for investment with a realistic evaluation of location, area, and future potential.",
       },
       {
-        title: "Outdoor Patio Design",
+        title: "Corporate & Organization Rentals",
         content:
-          "Extend your living space outdoors with a beautifully designed patio. We incorporate landscaping, seating, and lighting to create the perfect alfresco retreat.",
+          "Reliable rental solutions for foreign companies and organizations with clear, legal, and guaranteed contracts.",
       },
     ],
     faqs: [
       {
-        question: "How long does a renovation take?",
+        question: "How do I start buying or selling a property?",
         answer:
-          "The timeline depends on the scope of work. A kitchen or bathroom renovation usually takes 3-6 weeks, while larger projects may take longer. We provide a detailed schedule before starting.",
+          "You can contact us via the website or phone, and we will assess your needs and guide you step by step to ensure a smooth and safe experience.",
       },
       {
-        question: "Do you provide design services?",
+        question:
+          "Do you provide services for foreign companies and organizations?",
         answer:
-          "Yes, we offer full design services, including 3D renderings, material selection, and interior consulting to help you visualize your project before construction begins.",
+          "Yes, we provide reliable rental and purchase solutions for foreign companies and organizations with clear and fast-execution contracts.",
       },
       {
-        question: "What areas do you serve?",
+        question: "Can I rent a property for the long term?",
         answer:
-          "We primarily serve the metropolitan area and surrounding suburbs. Please contact us to confirm if we can handle projects in your specific location.",
+          "Of course, we have flexible rental options that suit individuals and companies according to clear and well-studied contracts.",
       },
       {
-        question: "Are you licensed and insured?",
+        question: "Do you deal with agricultural real estate?",
         answer:
-          "Absolutely. We are fully licensed and insured, ensuring that your home renovation project is handled professionally and safely.",
+          "Yes, we provide consultations, sales, and purchases for agricultural lands, in addition to farm design and equipment services according to the nature of the project.",
+      },
+      {
+        question: "How long do the buying or selling procedures usually take?",
+        answer:
+          "The duration depends on the type of property and legal procedures, but we make sure to speed up the process as much as possible while maintaining accuracy and transparency.",
+      },
+      {
+        question: "Can I get a consultation before making a decision?",
+        answer:
+          "Yes, we provide free real estate consultations that help you make the right and appropriate decision for your needs.",
+      },
+      {
+        question: "How can I ensure the safety of dealing with your office?",
+        answer:
+          "We work with more than 16 years of experience, with thousands of successful deals, and we are committed to transparency and clarity in all procedures to guarantee your rights.",
       },
     ],
     blogsData: [
@@ -210,22 +227,22 @@ export const translations = {
       contact: "اتصل بنا",
     },
     hero: {
-      title1: "اجعل",
-      title2: "منزلك جميلاً",
+      title1: "شريكك",
+      title2: "العقاري الموثوق",
       description:
-        "نقوم بتجديد المطابخ والحمامات وغرف النوم لجعل منزلك يبدو مذهلاً.",
+        "نساعد الأفراد والشركات على اتخاذ قرارات عقارية واضحة وآمنة، من أول تواصل حتى إتمام الصفقة.",
       cta: "عرض خدماتنا",
     },
     about: {
       badge: "من نحن",
       title: "من نحن",
       description:
-        "مع أكثر من 13 عاماً من الخبرة، نحن شركة رائدة في تجديد المنازل ونتخصص في المطابخ والحمامات وغرف النوم.",
+        "نقدّم خدمات عقارية متكاملة تبدأ من بيع وشراء الأراضي والبساتين، مرورًا بإعداد الخرائط وأعمال البناء والترميم، وصولًا إلى المقاولات المحدودة وتعقيب معاملات التسجيل العقاري.",
       stats: {
         experience: "سنوات من الخبرة",
-        projects: "مشاريع عالية الجودة مكتملة",
-        satisfied: "إجمالي العملاء الراضين",
-        happy: "عملاء سعداء",
+        projects: "بيع وشراء عقارات",
+        satisfied: "مناطق نعمل بها",
+        happy: " استشارة عقارية",
       },
       cta: "اتصل بنا الآن",
       callUs: "اتصل بنا",
@@ -234,7 +251,7 @@ export const translations = {
       badge: "خدماتنا",
       title: "ماذا نفعل",
       description:
-        "من المطابخ إلى الأفنية، نقوم بتحويل كل مساحة في منزلك بحرفية خبيرة وتصاميم إبداعية.",
+        "من الفكرة إلى التملّك، نقدّم لك تجربة عقارية منظمة وآمنة بكل تفاصيلها.",
     },
     projects: {
       badge: "مشاريعنا",
@@ -262,13 +279,14 @@ export const translations = {
     contact: {
       badge: "اتصل",
       title: "اتصل بنا",
-      description: "املأ النموذج أدناه وسنعاود الاتصال بك قريباً!",
+      description: "لا تتردد في الاتصال بنا نحن هنا لمساعدتك",
       firstName: "الاسم الأول",
       lastName: "اسم العائلة",
       email: "البريد الإلكتروني",
       phone: "الهاتف",
       message: "رسالتك",
       submit: "إرسال",
+      location: "بغداد المنصور شارع بيروت",
     },
     projectsData: [
       {
@@ -312,60 +330,119 @@ export const translations = {
         category: "تجديد",
       },
     ],
+    // accordion: [
+    //   {
+    //     title: "تجديد غرفة النوم",
+    //     content:
+    //       "قم بإنشاء ملاذك المثالي بطلاء جديد، وأرضيات عالية الجودة، وتخزين مدمج، وإضاءة محيطة. نصمم غرف نوم مريحة وأنيقة ستحب الاستيقاظ فيها والاسترخاء بعد أيام طويلة.",
+    //   },
+    //   {
+    //     title: "تجديد المطبخ",
+    //     content:
+    //       "حول مطبخك إلى ملاذ للطهي بأجهزة حديثة، وخزائن مخصصة، وأسطح عمل متينة. نخلق مساحات عملية وجميلة للطبخ والترفيه.",
+    //   },
+    //   {
+    //     title: "تجديد الحمام",
+    //     content:
+    //       "قم بترقية حمامك بميزات تشبه السبا، وتركيبات أنيقة، وتخطيطات فعالة. من الحمامات الرئيسية إلى غرف المسحوق، نعزز الراحة والقيمة.",
+    //   },
+    //   {
+    //     title: "تجديد غرفة المعيشة",
+    //     content:
+    //       "قم بتنشيط مساحة المعيشة الخاصة بك بتخطيطات أثاث مخصصة، وجدران مميزة، وحلول إضاءة. نخلق أجواء جذابة للاسترخاء والتجمعات الاجتماعية.",
+    //   },
+    //   {
+    //     title: "إعداد المكتب المنزلي",
+    //     content:
+    //       "عزز الإنتاجية بمكتب منزلي مخصص مصمم لسير عملك. نركز على بيئة العمل والإضاءة والتخزين لإنشاء مساحة عمل ملهمة.",
+    //   },
+    //   {
+    //     title: "تصميم الفناء الخارجي",
+    //     content:
+    //       "قم بتوسيع مساحة معيشتك في الهواء الطلق بفناء مصمم بشكل جميل. ندمج تنسيق الحدائق والمقاعد والإضاءة لإنشاء ملاذ مثالي في الهواء الطلق.",
+    //   },
+    // ],
     accordion: [
       {
-        title: "تجديد غرفة النوم",
+        title: "بيع العقارات",
         content:
-          "قم بإنشاء ملاذك المثالي بطلاء جديد، وأرضيات عالية الجودة، وتخزين مدمج، وإضاءة محيطة. نصمم غرف نوم مريحة وأنيقة ستحب الاستيقاظ فيها والاسترخاء بعد أيام طويلة.",
+          "نساعدك على بيع عقارك بالسعر المناسب وبإجراءات واضحة وآمنة تضمن حقوقك وتسهّل عملية البيع من البداية للنهاية.",
       },
       {
-        title: "تجديد المطبخ",
+        title: "شراء العقارات",
         content:
-          "حول مطبخك إلى ملاذ للطهي بأجهزة حديثة، وخزائن مخصصة، وأسطح عمل متينة. نخلق مساحات عملية وجميلة للطبخ والترفيه.",
+          "نوفّر خيارات مدروسة تناسب احتياجاتك وميزانيتك دون تعقيد، مع مرافقة كاملة في جميع مراحل الشراء.",
       },
       {
-        title: "تجديد الحمام",
+        title: "العقارات السكنية",
         content:
-          "قم بترقية حمامك بميزات تشبه السبا، وتركيبات أنيقة، وتخطيطات فعالة. من الحمامات الرئيسية إلى غرف المسحوق، نعزز الراحة والقيمة.",
+          "شقق ومنازل مختارة بعناية للاستخدام الشخصي أو الاستثماري، مع تقييم حقيقي للموقع والقيمة.",
       },
       {
-        title: "تجديد غرفة المعيشة",
+        title: "العقارات التجارية",
         content:
-          "قم بتنشيط مساحة المعيشة الخاصة بك بتخطيطات أثاث مخصصة، وجدران مميزة، وحلول إضاءة. نخلق أجواء جذابة للاسترخاء والتجمعات الاجتماعية.",
+          "محال، مكاتب، ومباني تجارية تدعم أهدافك طويلة الأمد وتناسب مختلف الأنشطة الاستثمارية.",
       },
       {
-        title: "إعداد المكتب المنزلي",
+        title: "الأراضي الزراعية",
         content:
-          "عزز الإنتاجية بمكتب منزلي مخصص مصمم لسير عملك. نركز على بيئة العمل والإضاءة والتخزين لإنشاء مساحة عمل ملهمة.",
+          "أراضٍ زراعية مناسبة للاستثمار مع تقييم واقعي للموقع، المساحة، والإمكانيات المستقبلية.",
       },
       {
-        title: "تصميم الفناء الخارجي",
+        title: "إيجارات الشركات والمنظمات",
         content:
-          "قم بتوسيع مساحة معيشتك في الهواء الطلق بفناء مصمم بشكل جميل. ندمج تنسيق الحدائق والمقاعد والإضاءة لإنشاء ملاذ مثالي في الهواء الطلق.",
+          "حلول إيجار موثوقة للشركات والمنظمات الأجنبية بعقود واضحة، نظامية، ومضمونة.",
       },
+      // {
+      //   title: "تصميم وتجهيز المزارع",
+      //   content:
+      //     "تخطيط وتجهيز المزارع من الفكرة إلى التنفيذ حسب طبيعة المشروع والإمكانات المتاحة.",
+      // },
+      // {
+      //   title: "استشارات عقارية",
+      //   content:
+      //     "نقدّم استشارات عقارية احترافية تساعدك على اتخاذ قرار صحيح وواضح مبني على معطيات حقيقية.",
+      // },
     ],
+
     faqs: [
       {
-        question: "كم يستغرق التجديد؟",
+        question: "كيف أبدأ عملية شراء أو بيع عقار؟",
         answer:
-          "يعتمد الجدول الزمني على نطاق العمل. يستغرق تجديد المطبخ أو الحمام عادةً من 3 إلى 6 أسابيع، بينما قد تستغرق المشاريع الأكبر وقتاً أطول. نحن نقدم جدولاً زمنياً مفصلاً قبل البدء.",
+          "يمكنك التواصل معنا عبر الموقع أو الهاتف، ونقوم بتقييم احتياجاتك وإرشادك خطوة بخطوة لضمان تجربة سلسة وآمنة.",
       },
       {
-        question: "هل تقدمون خدمات التصميم؟",
+        question: "هل تقدمون خدمات للشركات والمنظمات الأجنبية؟",
         answer:
-          "نعم، نحن نقدم خدمات تصميم كاملة، بما في ذلك التصورات ثلاثية الأبعاد واختيار المواد والاستشارات الداخلية لمساعدتك في تصور مشروعك قبل بدء البناء.",
+          "نعم، نقدّم حلول إيجار وشراء موثوقة للشركات والمنظمات الأجنبية بعقود واضحة وسريعة التنفيذ.",
       },
       {
-        question: "ما هي المناطق التي تخدمونها؟",
+        question: "هل يمكنني استئجار عقار طويل الأمد؟",
         answer:
-          "نحن نخدم بشكل أساسي منطقة العاصمة والضواحي المحيطة بها. يرجى الاتصال بنا للتأكد مما إذا كان بإمكاننا تولي مشاريع في موقعك المحدد.",
+          "بالطبع، لدينا خيارات إيجار مرنة تناسب الأفراد والشركات وفق عقود واضحة ومدروسة.",
       },
       {
-        question: "هل أنتم مرخصون ومؤمنون؟",
+        question: "هل تتعاملون مع العقارات الزراعية؟",
         answer:
-          "بالتأكيد. نحن مرخصون ومؤمنون بالكامل، مما يضمن التعامل مع مشروع تجديد منزلك باحترافية وأمان.",
+          "نعم، نقدّم استشارات وبيع وشراء للأراضي الزراعية، بالإضافة إلى خدمات تصميم وتجهيز المزارع حسب طبيعة المشروع.",
+      },
+      {
+        question: "كم تستغرق إجراءات البيع أو الشراء عادة؟",
+        answer:
+          "تعتمد المدة على نوع العقار والإجراءات القانونية، لكن نحرص على تسريع العملية قدر الإمكان مع الحفاظ على الدقة والشفافية.",
+      },
+      {
+        question: "هل يمكنني الحصول على استشارة قبل اتخاذ القرار؟",
+        answer:
+          "نعم، نقدم استشارات عقارية مجانية تساعدك على اتخاذ القرار الصحيح والمناسب لاحتياجاتك.",
+      },
+      {
+        question: "كيف أضمن أمان التعامل مع مكتبكم؟",
+        answer:
+          "نعمل بخبرة تزيد عن 16 سنة، مع آلاف الصفقات الناجحة، ونلتزم بالشفافية والوضوح في جميع الإجراءات لضمان حقوقك.",
       },
     ],
+
     blogsData: [
       {
         id: 1,
@@ -398,5 +475,6 @@ export const translations = {
           "التخطيط أمر بالغ الأهمية. ابدأ بتحديد التخطيط الخاص بك - المطبخ الطولي، أو على شكل حرف L، أو على شكل حرف U. تلعب الإضاءة دوراً كبيراً؛ تأكد من وجود إضاءة للمهام تحت الخزائن. لا تقتصد في الأجهزة عالية الجودة؛ يمكنها أن تجعل المطبخ منخفض الميزانية يبدو راقياً.",
       },
     ],
+    // الموقع بغداد المنصور شارع بيروت
   },
 };

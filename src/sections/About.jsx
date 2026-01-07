@@ -212,26 +212,26 @@ const About = () => {
 
   const ArrayCard = [
     {
-      number: 13,
+      number: 16,
       afterNumber: "+",
       title: t.stats.experience,
       icon: <ArrowSvg />,
     },
     {
-      number: 250,
+      number: 400,
       afterNumber: "+",
       title: t.stats.projects,
       icon: <BackSvg />,
     },
     {
-      number: 9,
-      afterNumber: "m",
+      number: 10,
+      afterNumber: "+",
       title: t.stats.satisfied,
       icon: <FolderSvg />,
     },
     {
-      number: 6,
-      afterNumber: "k",
+      number: 2000,
+      afterNumber: "+",
       title: t.stats.happy,
       icon: <HomeSvg />,
     },
@@ -299,7 +299,7 @@ const About = () => {
               <div className="flex flex-col sm:flex-row items-center gap-6 justify-start w-full">
                 <MainButton
                   text={t.cta}
-                  href="whatsapp://send?phone=+9647727488537"
+                  href="whatsapp://send?phone=+9647700180809"
                   textcolor="text-black"
                   texthovercolor="text-white"
                   buttoncolor="bg-[#fff]"
@@ -315,7 +315,8 @@ const About = () => {
                   <div className="flex flex-col text-[#4e4e4e]">
                     <p className="font-semibold text-sm">{t.callUs}</p>
                     <p className="text-lg font-bold" dir="ltr">
-                      +964 772 7488 537
+                      {/* +964 772 7488 537 */}
+                      +964 770 018 0809
                     </p>
                   </div>
                 </div>

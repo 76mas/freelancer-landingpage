@@ -1,14 +1,14 @@
 "use client";
 import { Accordion, AccordionItem } from "@heroui/react";
 import {
-  IoBedOutline,
-  IoRestaurantOutline,
-  IoDesktopOutline,
+  IoCashOutline,
+  IoKeyOutline,
+  IoHomeOutline,
+  IoBusinessOutline,
   IoLeafOutline,
+  IoPeopleOutline,
   IoAdd,
 } from "react-icons/io5";
-import { BiBath } from "react-icons/bi";
-import { LuSofa } from "react-icons/lu";
 import clsx from "clsx";
 
 import { useLanguage } from "@/context/LanguageContext";
@@ -19,12 +19,12 @@ export default function BasicAccordion() {
   const t = translations[lang].accordion;
 
   const icons = [
-    <IoBedOutline className="text-xl" />,
-    <IoRestaurantOutline className="text-xl" />,
-    <BiBath className="text-xl" />,
-    <LuSofa className="text-xl" />,
-    <IoDesktopOutline className="text-xl" />,
+    <IoCashOutline className="text-xl" />,
+    <IoKeyOutline className="text-xl" />,
+    <IoHomeOutline className="text-xl" />,
+    <IoBusinessOutline className="text-xl" />,
     <IoLeafOutline className="text-xl" />,
+    <IoPeopleOutline className="text-xl" />,
   ];
 
   const items = t.map((item, index) => ({

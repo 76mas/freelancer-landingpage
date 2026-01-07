@@ -54,10 +54,10 @@ const Fqa = () => {
 
           <div className="w-full h-fit grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-start lg:items-center ">
             <div className="relative w-full flex justify-center lg:block">
-              <div className="w-full max-w-[500px]">
+              <div className="w-full max-w-[600px]">
                 <CustomShapeImage
-                  width={500}
-                  height={400}
+                  width={600}
+                  height={600}
                   src="https://plus.unsplash.com/premium_photo-1733760124949-7d15ff2f677e?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 />
               </div>
@@ -73,7 +73,7 @@ const Fqa = () => {
 
                 <MainButton
                   text={t.cta}
-                  href="whatsapp://send?phone=+9647727488537"
+                  href="whatsapp://send?phone=+9647700180809"
                   textcolor="text-black"
                   texthovercolor="text-white"
                   buttoncolor="bg-[#fff]"

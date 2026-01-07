@@ -6,7 +6,6 @@ import {
   IoLocationOutline,
   IoChevronForwardOutline,
 } from "react-icons/io5";
-import { FaAngleDoubleRight } from "react-icons/fa";
 
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/constants/translations";
@@ -48,85 +47,30 @@ const Contect = () => {
                   <IoCallOutline className="text-xl" />
                 </div>
                 <span className="text-lg" dir="ltr">
-                  +1 234 564 34
+                  +964 770 018 0809
                 </span>
               </div>
               <div className="flex items-center gap-4 text-gray-700">
                 <div className="w-10 h-10 flex items-center justify-center  rounded-full">
                   <IoLocationOutline className="text-xl" />
                 </div>
-                <span className="text-lg">
-                  43 Louise Ave, 10, Charlotte, NC 204
-                </span>
+                <span className="text-lg">{t.location}</span>
               </div>
             </div>
           </div>
 
           {/* Right Column: Form */}
-          <div className="bg-[#f8f9fa] border border-gray-200 rounded-[40px] p-10 md:p-12 shadow-sm">
-            <form
-              className="flex flex-col gap-10"
-              onSubmit={(e) => e.preventDefault()}
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="flex flex-col gap-2">
-                  <label className="text-sm font-medium text-gray-500">
-                    {t.firstName}
-                  </label>
-                  <input
-                    type="text"
-                    className="bg-transparent border-b border-gray-300 py-2 focus:outline-none focus:border-black transition-colors"
-                  />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-sm font-medium text-gray-500">
-                    {t.lastName}
-                  </label>
-                  <input
-                    type="text"
-                    className="bg-transparent border-b border-gray-300 py-2 focus:outline-none focus:border-black transition-colors"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="flex flex-col gap-2">
-                  <label className="text-sm font-medium text-gray-500">
-                    {t.email}
-                  </label>
-                  <input
-                    type="email"
-                    className="bg-transparent border-b border-gray-300 py-2 focus:outline-none focus:border-black transition-colors"
-                  />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-sm font-medium text-gray-500">
-                    {t.phone}
-                  </label>
-                  <input
-                    type="tel"
-                    className="bg-transparent border-b border-gray-300 py-2 focus:outline-none focus:border-black transition-colors"
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <label className="text-sm font-medium text-gray-500">
-                  {t.message}
-                </label>
-                <textarea
-                  rows="1"
-                  className="bg-transparent border-b border-gray-300 py-2 focus:outline-none focus:border-black transition-colors resize-none overflow-hidden"
-                ></textarea>
-              </div>
-
-              <button className="w-full bg-black text-white h-[60px] rounded-full flex items-center justify-center gap-2 group relative overflow-hidden transition-all duration-300 hover:bg-zinc-800">
-                <span className="text-lg font-medium mx-auto">{t.submit}</span>
-                <div className="absolute right-6">
-                  <FaAngleDoubleRight className="text-xl group-hover:translate-x-1 transition-transform" />
-                </div>
-              </button>
-            </form>
+          <div className="bg-black border border-gray-800 rounded-[40px] overflow-hidden shadow-sm h-full min-h-[500px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3334.5420228990533!2d44.35067278480455!3d33.30464248081599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDE4JzE2LjciTiA0NMKwMjAnNTQuNSJF!5e0!3m2!1sar!2siq!4v1767782242530!5m2!1sar!2siq"
+              width="100%"
+              height="100%"
+              style={{ border: 0, filter: "invert(90%) hue-rotate(180deg)" }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full"
+            ></iframe>
           </div>
         </div>
       </Container>

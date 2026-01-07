@@ -107,7 +107,7 @@ const Header = () => {
     { label: t.about, href: "#about" },
     { label: t.services, href: "#services" },
     { label: t.projects, href: "#projects" },
-    { label: t.blog, href: "#blog" },
+    // { label: t.blog, href: "#blog" },
     { label: t.faq, href: "#faq" },
     { label: t.contact, href: "#contact" },
   ];
