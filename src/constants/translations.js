@@ -40,7 +40,7 @@ export const translations = {
       badge: "Our Projects",
       title: "Our Recent Projects",
       description:
-        "See how we transform spaces with our creative designs and expert craftsmanship. Let us bring your vision to life. The projects below showcase our commitment to quality and creativity.",
+        "Explore a selection of our work in buying and selling homes, lands, and commercial real estate. Our projects reflect our expertise in selecting prime locations, precise procedures, and commitment to providing the best real estate opportunities for our clients.",
     },
     blog: {
       badge: "Our Blog",
@@ -74,43 +74,27 @@ export const translations = {
     projectsData: [
       {
         id: 1,
-        title: "Modern Loft Renovation",
+        title: "Buy and Sell Residential Homes",
         description:
-          "A complete transformation of an industrial loft into a warm, modern living space. Features include a custom kitchen island, open-concept layout, and smart home integration.",
-        year: "2023",
-        image:
-          "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        category: "Interior Design",
+          "We provide a variety of residential home options in prime neighborhoods, with full follow-up of the buying or selling process to ensure comfort and security until property handover.",
+        image: "/images/project1.png",
+        category: "Residential",
       },
       {
         id: 2,
-        title: "Coastal Villa Landscape",
+        title: "Buy and Sell Farms and Lands",
         description:
-          "Designed a serene outdoor oasis for a luxury villa. Includes a custom pool deck, drought-resistant landscaping, and ambient lighting for evening entertainment.",
-        year: "2024",
-        image:
-          "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        category: "Landscaping",
+          "We help you own farms and lands in well-studied locations and various sizes, with ownership verification and seamless legal transaction completion.",
+        image: "/images/project2.png",
+        category: "Farms & Lands",
       },
       {
         id: 3,
-        title: "Urban Office Space",
+        title: "Buy and Sell Commercial Real Estate",
         description:
-          "Revamped a downtown corporate office to foster collaboration and productivity. Custom ergonomic furniture, acoustic solutions, and vibrant break areas.",
-        year: "2022",
-        image:
-          "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "We offer customized real estate solutions for commercial investment, including shops and complexes, with location and return studies to ensure a successful investment decision.",
+        image: "/images/project3.png",
         category: "Commercial",
-      },
-      {
-        id: 4,
-        title: "Minimalist Kitchen",
-        description:
-          "A sleek, functional kitchen design maximizing storage and style. Matte black cabinetry, quartz countertops, and hidden appliances define this modern space.",
-        year: "2023",
-        image:
-          "https://images.unsplash.com/photo-1716829094982-345e699674cd?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        category: "Renovation",
       },
     ],
     accordion: [
@@ -257,8 +241,9 @@ export const translations = {
       badge: "مشاريعنا",
       title: "أحدث مشاريعنا",
       description:
-        "انظر كيف نحول المساحات بتصاميمنا الإبداعية وحرفيتنا الخبيرة. دعنا نحول رؤيتك إلى واقع. المشاريع أدناه تظهر التزامنا بالجودة والإبداع.",
+        "اطّلع على مجموعة من أعمالنا في بيع وشراء المنازل، الأراضي، والعقارات التجارية. مشاريعنا تعكس خبرتنا في اختيار المواقع المميزة، ودقة الإجراءات، والالتزام بتقديم أفضل الفرص العقارية لعملائنا.",
     },
+
     blog: {
       badge: "مدونتنا",
       title: "أحدث الأخبار والرؤى",
@@ -291,45 +276,32 @@ export const translations = {
     projectsData: [
       {
         id: 1,
-        title: "تجديد لوفت عصري",
+        title: "بيع وشراء المنازل السكنية",
         description:
-          "تحول كامل لمساحة لوفت صناعية إلى مساحة معيشة دافئة وعصرية. تشمل الميزات جزيرة مطبخ مخصصة، وتخطيطاً مفتوحاً، وتكاملاً مع المنزل الذكي.",
-        year: "2023",
-        image:
-          "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        category: "التصميم الداخلي",
+          "نوفر لك خيارات متنوعة من المنازل السكنية داخل الأحياء المميزة، مع متابعة كاملة لعملية البيع أو الشراء لضمان الراحة والأمان حتى استلام العقار.",
+        image: "/images/project1.png",
+        category: "منازل سكنية",
       },
       {
         id: 2,
-        title: "تنسيق حدائق فيلا ساحلية",
+        title: "بيع وشراء المزارع والأراضي",
         description:
-          "تصميم واحة خارجية هادئة لفيلا فاخرة. يشمل سطح مسبح مخصص، وتنسيق حدائق مقاوم للجفاف، وإضاءة محيطة للترفيه المسائي.",
-        year: "2024",
-        image:
-          "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        category: "تنسيق الحدائق",
+          "نساعدك في امتلاك المزارع والأراضي بمواقع مدروسة ومساحات مختلفة، مع تدقيق الملكية وإنجاز المعاملات القانونية بكل سلاسة.",
+        // year: "2024",
+        image: "/images/project2.png",
+        category: "المزارع والأراضي",
       },
       {
         id: 3,
-        title: "مساحة مكتبية حضرية",
+        title: "بيع وشراء العقارات التجارية",
         description:
-          "تجديد مكتب شركة في وسط المدينة لتعزيز التعاون والإنتاجية. أثاث مريح مخصص، وحلول صوتية، ومناطق استراحة حيوية.",
-        year: "2022",
-        image:
-          "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "نقدم حلولًا عقارية مخصصة للاستثمار التجاري تشمل المحال والمجمعات، مع دراسة الموقع والعائد لضمان قرار استثماري ناجح.",
+        // year: "2022",
+        image: "/images/project3.png",
         category: "تجاري",
       },
-      {
-        id: 4,
-        title: "مطبخ بسيط",
-        description:
-          "تصميم مطبخ أنيق وعملي يزيد من مساحة التخزين والأسلوب. خزائن سوداء غير لامعة وكوارتز وأجهزة مخفية تحدد هذه المساحة الحديثة.",
-        year: "2023",
-        image:
-          "https://images.unsplash.com/photo-1716829094982-345e699674cd?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        category: "تجديد",
-      },
     ],
+
     // accordion: [
     //   {
     //     title: "تجديد غرفة النوم",
@@ -393,16 +365,6 @@ export const translations = {
         content:
           "حلول إيجار موثوقة للشركات والمنظمات الأجنبية بعقود واضحة، نظامية، ومضمونة.",
       },
-      // {
-      //   title: "تصميم وتجهيز المزارع",
-      //   content:
-      //     "تخطيط وتجهيز المزارع من الفكرة إلى التنفيذ حسب طبيعة المشروع والإمكانات المتاحة.",
-      // },
-      // {
-      //   title: "استشارات عقارية",
-      //   content:
-      //     "نقدّم استشارات عقارية احترافية تساعدك على اتخاذ قرار صحيح وواضح مبني على معطيات حقيقية.",
-      // },
     ],
 
     faqs: [

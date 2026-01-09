@@ -9,11 +9,17 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ant-design/icons": "^6.1.0",
     "@gsap/react": "^2.1.2",
     "@heroui/accordion": "^2.2.26",
     "@heroui/react": "^2.8.7",
+    "@prisma/client": "^7.2.0",
+    "antd": "^6.1.4",
+    "bcryptjs": "^3.0.3",
     "clsx": "^2.1.1",
+    "dotenv": "^17.2.3",
     "gsap": "^3.14.2",
+    "jsonwebtoken": "^9.0.3",
     "motion": "^12.23.26",
     "next": "16.1.1",
     "react": "19.2.3",
@@ -26,6 +32,7 @@
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.1.1",
+    "prisma": "^7.2.0",
     "tailwindcss": "^4"
   }
 }

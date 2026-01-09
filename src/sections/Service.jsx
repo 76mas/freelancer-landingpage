@@ -37,7 +37,7 @@ const Service = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 mt-12 md:mt-20 gap-10 lg:gap-20 p-6 md:p-20 items-center text-white w-full bg-black rounded-3xl justify-center">
             <div className="w-full h-[300px] md:h-[500px] rounded-2xl flex items-center justify-center">
               <img
-                src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="/images/service.png"
                 alt="Bedroom Makeover"
                 className="w-full h-full object-cover rounded-2xl"
               />

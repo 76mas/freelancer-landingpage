@@ -264,7 +264,7 @@ const About = () => {
                 <CustomShapeImage
                   width={500}
                   height={400}
-                  src="https://images.unsplash.com/photo-1759337283317-a452c486d79a?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8"
+                  src="/images/about.png"
                 />
               </div>
             </div>
