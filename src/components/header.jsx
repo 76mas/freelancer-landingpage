@@ -122,7 +122,18 @@ const Header = () => {
           <div
             className={`flex items-start justify-center font-bold text-2xl transition-colors duration-500 ${mobileThemeClasses.logo}`}
           >
-            MAS
+            {/*  */}
+            <div className="w-[70px]">
+              <img
+                src={
+                  (isOpen ? themeClasses.text : themeClasses.logo) ===
+                  "text-white"
+                    ? "/images/logos/whitelogo.png"
+                    : "/images/logos/blacklogo.png"
+                }
+                alt="Logo"
+              />
+            </div>
           </div>
 
           {/* Desktop Navigation */}
