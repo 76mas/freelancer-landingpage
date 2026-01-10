@@ -71,18 +71,23 @@ const Contect = () => {
               referrerPolicy="no-referrer-when-downgrade"
               className="w-full h-full"
             ></iframe>
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center z-10 backdrop-blur-[2px] pointer-events-none group-hover:pointer-events-auto">
-              <MainButton
-                text={lang === "ar" ? "عرض الموقع" : "View Location"}
-                href="https://maps.google.com/?q=33.30464248081599,44.35067278480455"
-                target="_blank"
-                textcolor="text-white"
-                texthovercolor="text-white"
-                buttoncolor="bg-[#000000]"
-                buttonhovercolor="bg-[#966106]"
-                backgroundcolor="bg-[#966106]"
-                iconcolor="text-white"
-              />
+            {/* Transparent layer to catch touches on mobile without triggering iframe pan immediately */}
+            <div className="absolute inset-0 z-10 lg:hidden pointer-events-auto" />
+
+            <div className="absolute inset-0 bg-black/60 flex items-center justify-center z-20 transition-all duration-500 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 pointer-events-auto lg:pointer-events-none lg:group-hover:pointer-events-auto">
+              <div className="transform scale-90 sm:scale-100">
+                <MainButton
+                  text={lang === "ar" ? "عرض الموقع" : "View Location"}
+                  href="https://maps.google.com/?q=33.30464248081599,44.35067278480455"
+                  target="_blank"
+                  textcolor="text-white"
+                  texthovercolor="text-white"
+                  buttoncolor="bg-[#000000]"
+                  buttonhovercolor="bg-[#966106]"
+                  backgroundcolor="bg-[#966106]"
+                  iconcolor="text-white"
+                />
+              </div>
             </div>
           </div>
         </div>
