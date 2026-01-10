@@ -230,7 +230,7 @@ const About = () => {
       icon: <FolderSvg />,
     },
     {
-      number: 2000,
+      number: 7000,
       afterNumber: "+",
       title: t.stats.happy,
       icon: <HomeSvg />,

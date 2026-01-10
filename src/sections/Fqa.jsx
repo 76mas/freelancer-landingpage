@@ -58,7 +58,7 @@ const Fqa = () => {
                 <CustomShapeImage
                   width={600}
                   height={600}
-                  src="https://plus.unsplash.com/premium_photo-1733760124949-7d15ff2f677e?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src="/images/fqa.png"
                 />
               </div>
             </div>

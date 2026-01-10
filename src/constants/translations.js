@@ -18,7 +18,7 @@ export const translations = {
     },
     about: {
       badge: "About Us",
-      title: "Who We Are",
+      title: "AL SANAD FOR REAL ESTATE",
       description:
         "We provide integrated real estate services starting from buying and selling lands and orchards, through preparing maps, construction and restoration works, to limited contracting and following up on real estate registration transactions.",
       stats: {
@@ -219,7 +219,7 @@ export const translations = {
     },
     about: {
       badge: "من نحن",
-      title: "من نحن",
+      title: "السند للعقار",
       description:
         "نقدّم خدمات عقارية متكاملة تبدأ من بيع وشراء الأراضي والبساتين، مرورًا بإعداد الخرائط وأعمال البناء والترميم، وصولًا إلى المقاولات المحدودة وتعقيب معاملات التسجيل العقاري.",
       stats: {

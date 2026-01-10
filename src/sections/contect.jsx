@@ -91,7 +91,7 @@ const Contect = () => {
       <div className="w-full relative h-[500px] bg-[#f8f9fa]">
         <img
           className="w-full h-full object-cover"
-          src="https://images.unsplash.com/photo-1652792997653-7e5897fb309a?q=80&w=3864&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="/images/footer.png"
           alt=""
         />
         <div className="absolute top-0 left-0 w-full h-[30%] bg-gradient-to-b from-white to-transparent"></div>
