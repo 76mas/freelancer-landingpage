@@ -41,7 +41,7 @@ const Contect = () => {
                 <div className="w-10 h-10 flex items-center justify-center  rounded-full">
                   <IoMailOutline className="text-xl" />
                 </div>
-                <span className="text-lg">Deankresh@gmail.com</span>
+                <span className="text-lg">info@sanadd.com</span>
               </div>
               <div className="flex items-center gap-4 text-gray-700">
                 <div className="w-10 h-10 flex items-center justify-center  rounded-full">

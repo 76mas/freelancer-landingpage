@@ -69,7 +69,7 @@ export const translations = {
       phone: "Phone",
       message: "Your Message",
       submit: "Submit",
-      location: "Baghdad Al-Mansour Beirut Street",
+      location: "Baghdad Al-Mansour Amirat Street",
     },
     projectsData: [
       {
@@ -271,7 +271,7 @@ export const translations = {
       phone: "الهاتف",
       message: "رسالتك",
       submit: "إرسال",
-      location: "بغداد المنصور شارع بيروت",
+      location: "بغداد المنصور شارع الأميرات",
     },
     projectsData: [
       {
