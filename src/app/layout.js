@@ -18,6 +18,14 @@ const geistMono = Geist_Mono({
 // };
 
 export const metadata = {
+  icons: {
+    icon: "/images/logos/we.png",
+    apple: "/images/logos/we.png",
+    appleIos: "/images/logos/we.png",
+    appleStartup: "/images/logos/we.png",
+    favicon: "/images/logos/we.png",
+    faviconPrecomposed: "/images/logos/we.png",
+  },
   title: "سند للعقار | مكتب عقاري في بغداد – المنصور شارع الأميرات",
   description:
     "مكتب السند للعقار في بغداد يقدم خدمات بيع وشراء وتأجير العقارات السكنية والتجارية في المنصور وشارع الأميرات وباقي مناطق بغداد. خبرة، مصداقية، وإنجاز سريع للمعاملات العقارية.",
