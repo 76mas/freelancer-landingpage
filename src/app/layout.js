@@ -147,11 +147,55 @@ export const metadata = {
 };
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="ar">
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap"
           rel="stylesheet"
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "RealEstateAgent", // تحديد النشاط كمكتب عقارات
+              name: "سند للعقار - Sanad Real Estate",
+              image: "https://sanadd.com/images/logos/we.png",
+              "@id": "https://sanadd.com",
+              url: "https://sanadd.com",
+              telephone: "+9647700180809",
+              email: "info@sanadd.com",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "المنصور - شارع الأميرات",
+                addressLocality: "بغداد",
+                addressCountry: "IQ",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 33.325, // إحداثيات تقريبية للمنصور، يفضل استبدالها بدقة
+                longitude: 44.347,
+              },
+              openingHoursSpecification: {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Saturday",
+                  "Sunday",
+                ],
+                opens: "09:00",
+                closes: "21:00",
+              },
+              // sameAs: [
+              //   "https://www.facebook.com/your-page", // ضيف روابط التواصل الاجتماعي مالتك هنا
+              //   "https://www.instagram.com/your-page",
+              // ],
+            }),
+          }}
         />
       </head>
       <body
