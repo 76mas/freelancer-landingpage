@@ -123,7 +123,7 @@ const Header = () => {
             className={`flex items-start justify-center font-bold text-2xl transition-colors duration-500 ${mobileThemeClasses.logo}`}
           >
             {/*  */}
-            <div className="w-[100px]">
+            <div className="w-[200px]">
               <img
                 src={
                   (isOpen ? themeClasses.text : themeClasses.logo) ===

@@ -6,6 +6,8 @@ import {
   IoLocationOutline,
   IoChevronForwardOutline,
 } from "react-icons/io5";
+import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
+import BotimIcon from "@/components/BotimIcon";
 import MainButton from "@/components/mainbutton";
 
 import { useLanguage } from "@/context/LanguageContext";
@@ -57,6 +59,45 @@ const Contect = () => {
                 </div>
                 <span className="text-lg">{t.location}</span>
               </div>
+              {/* social links */}
+              <div className="flex items-center gap-4 text-gray-700 mt-6">
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-100 hover:bg-blue-600 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                  aria-label="Facebook"
+                >
+                  <FaFacebook className="text-xl" />
+                </a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gradient-to-br hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram className="text-xl" />
+                </a>
+                <a
+                  href="https://tiktok.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-100 hover:bg-black hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                  aria-label="TikTok"
+                >
+                  <FaTiktok className="text-xl" />
+                </a>
+                <a
+                  href="https://botim.me"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-100 hover:bg-sky-600 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                  aria-label="Botim"
+                >
+                  <BotimIcon className="w-5 h-5" />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -78,7 +119,7 @@ const Contect = () => {
               <div className="transform scale-90 sm:scale-100">
                 <MainButton
                   text={lang === "ar" ? "عرض الموقع" : "View Location"}
-                  href="https://maps.google.com/?q=33.30464248081599,44.35067278480455"
+                  href="https://maps.app.goo.gl/EVK1oELe3gUWqSmq9?g_st=ic"
                   target="_blank"
                   textcolor="text-white"
                   texthovercolor="text-white"

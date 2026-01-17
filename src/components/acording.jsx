@@ -7,6 +7,7 @@ import {
   IoBusinessOutline,
   IoLeafOutline,
   IoPeopleOutline,
+  IoDocumentTextOutline,
   IoAdd,
 } from "react-icons/io5";
 import clsx from "clsx";
@@ -25,6 +26,7 @@ export default function BasicAccordion() {
     <IoBusinessOutline className="text-xl" />,
     <IoLeafOutline className="text-xl" />,
     <IoPeopleOutline className="text-xl" />,
+    <IoDocumentTextOutline className="text-xl" />,
   ];
 
   const items = t.map((item, index) => ({

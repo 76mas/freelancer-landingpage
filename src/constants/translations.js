@@ -128,6 +128,11 @@ export const translations = {
         content:
           "Reliable rental solutions for foreign companies and organizations with clear, legal, and guaranteed contracts.",
       },
+      {
+        title: "Property Evaluation",
+        content:
+          "We provide accurate and objective property evaluation services through analysis of property location, technical condition, legal status, and current market movement, aiming to determine its true value and help clients make informed decisions in selling, buying, or investing.",
+      },
     ],
     faqs: [
       {
@@ -364,6 +369,11 @@ export const translations = {
         title: "إيجارات الشركات والمنظمات",
         content:
           "حلول إيجار موثوقة للشركات والمنظمات الأجنبية بعقود واضحة، نظامية، ومضمونة.",
+      },
+      {
+        title: "تقييم العقار",
+        content:
+          "نوفّر خدمة تقييم العقار بدقة وموضوعية من خلال تحليل موقع العقار، حالته الفنية، وضعه القانوني، وحركة السوق الحالية، بهدف تحديد قيمته الحقيقية ومساعدة العملاء على اتخاذ قرارات مدروسة في البيع أو الشراء أو الاستثمار.",
       },
     ],
 
