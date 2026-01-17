@@ -85,19 +85,40 @@ const Hero = ({}) => {
             </div>
 
             <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-end gap-6">
-              <p className="text-gray-300 text-center lg:text-right text-base md:text-xl max-w-md">
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.3,
+                  ease: "easeOut",
+                }}
+                className="text-gray-300 text-center lg:text-right text-base md:text-xl max-w-md"
+              >
                 {t.description}
-              </p>
+              </motion.p>
 
-              <MainButton
-                text={t.cta}
-                href="#services"
-                textcolor="text-white"
-                texthovercolor="text-white"
-                buttoncolor="bg-[#000000]"
-                buttonhovercolor="bg-[#966106]"
-                backgroundcolor="bg-[#966106]"
-              />
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.5,
+                  ease: "easeOut",
+                }}
+              >
+                <MainButton
+                  text={t.cta}
+                  href="#services"
+                  textcolor="text-white"
+                  texthovercolor="text-white"
+                  buttoncolor="bg-[#000000]"
+                  buttonhovercolor="bg-[#966106]"
+                  backgroundcolor="bg-[#966106]"
+                />
+              </motion.div>
             </div>
           </div>
 

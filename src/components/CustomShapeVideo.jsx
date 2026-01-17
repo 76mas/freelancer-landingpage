@@ -1,10 +1,11 @@
 import { useId } from "react";
+import "./CustomShapeVideo.css";
 
 const CustomShapeVideo = ({ src }) => {
   const clipId = useId();
 
   return (
-    <div className="w-full h-[250px] md:h-[400px]">
+    <div className="w-full h-[250px] md:h-[400px] relative overflow-hidden rounded-2xl md:rounded-none">
       <svg width="0" height="0">
         <defs>
           <clipPath id={clipId} clipPathUnits="objectBoundingBox">
@@ -31,6 +32,10 @@ const CustomShapeVideo = ({ src }) => {
         <source src="/demo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+
+      {/* Reveal animation overlays */}
+      <div className="absolute top-0 left-0 up bg-black w-1/2 h-full"></div>
+      <div className="absolute bottom-0 right-0 down bg-black w-1/2 h-full"></div>
     </div>
   );
 };
