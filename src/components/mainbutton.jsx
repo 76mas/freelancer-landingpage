@@ -15,10 +15,26 @@ const MainButton = ({
   target,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
+
+  const handleClick = (e) => {
+    // Check if href is an anchor link (starts with #)
+    if (href && href.startsWith("#")) {
+      e.preventDefault();
+      const targetElement = document.querySelector(href);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
+  };
+
   return (
     <a
       href={href}
       target={target}
+      onClick={handleClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={`group relative flex cursor-pointer z-10 items-center overflow-hidden justify-between gap-4 p-1 pr-9 rounded-full ${backgroundcolor} transition-all duration-300`}
@@ -29,7 +45,7 @@ const MainButton = ({
         <p
           className={clsx(
             "transition-all duration-300 relative z-20",
-            isHovered ? texthovercolor : textcolor
+            isHovered ? texthovercolor : textcolor,
           )}
         >
           {text}
@@ -45,14 +61,14 @@ const MainButton = ({
       <FaAnglesRight
         className={clsx(
           `w-5 h-5 z-20 absolute transition-all duration-300 ${iconcolor}`,
-          isHovered ? "right-2 opacity-100" : "right-12 opacity-0"
+          isHovered ? "right-2 opacity-100" : "right-12 opacity-0",
         )}
       />
 
       <div
         className={clsx(
           `absolute z-20 transition-all duration-300 ${iconcolor}`,
-          isHovered ? "translate-x-10 opacity-0" : "right-2 translate-x-0"
+          isHovered ? "translate-x-10 opacity-0" : "right-2 translate-x-0",
         )}
       >
         <FaAnglesRight className="w-5 h-5" />
