@@ -52,7 +52,8 @@ const Header = () => {
             setTheme("dark");
           }
 
-          if (id && id !== "hero") {
+          // Only set active section for actual sections, not for #dev
+          if (id && id !== "hero" && id !== "dev") {
             setActiveSection(id);
           } else if (id === "hero") {
             setActiveSection("");
@@ -63,7 +64,11 @@ const Header = () => {
 
     const observer = new IntersectionObserver(handleIntersect, observerOptions);
     const sections = document.querySelectorAll("section");
+    const devSection = document.querySelector("#dev");
     sections.forEach((section) => observer.observe(section));
+    if (devSection) {
+      observer.observe(devSection);
+    }
 
     return () => observer.disconnect();
   }, []);
