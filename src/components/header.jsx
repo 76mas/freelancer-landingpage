@@ -36,7 +36,7 @@ const Header = () => {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: "-20% 0px -70% 0px",
+      rootMargin: "-5% 0px -70% 0px",
       threshold: 0,
     };
 
@@ -120,7 +120,7 @@ const Header = () => {
   return (
     <div
       dir="ltr"
-      className="w-full h-[120px] md:h-[200px] fixed top-0 left-0 z-50 flex items-center justify-center transition-all duration-500"
+      className="w-full  fixed top-0 left-0 z-50 flex items-center justify-center transition-all duration-500"
     >
       <Container>
         <div className="flex items-center justify-between relative z-60">

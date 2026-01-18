@@ -92,8 +92,8 @@ const Blog = () => {
       blog.id === 1
         ? "https://plus.unsplash.com/premium_photo-1661963540233-94097ba21f27"
         : blog.id === 2
-        ? "https://images.unsplash.com/photo-1493809842364-78817add7ffb"
-        : "https://plus.unsplash.com/premium_photo-1733760124949-7d15ff2f677e",
+          ? "https://images.unsplash.com/photo-1493809842364-78817add7ffb"
+          : "https://plus.unsplash.com/premium_photo-1733760124949-7d15ff2f677e",
     content: () => <p>{blog.content}</p>,
   }));
 
