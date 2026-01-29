@@ -7,6 +7,8 @@ import {
   IoChevronForwardOutline,
 } from "react-icons/io5";
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
+import { WhatsAppOutlined } from "@ant-design/icons";
+// import { WhatsApp } from "@/components/WhatsApp";
 import BotimIcon from "@/components/BotimIcon";
 import MainButton from "@/components/mainbutton";
 
@@ -61,7 +63,7 @@ const Contect = () => {
               </div>
               {/* social links */}
               <div className="flex items-center gap-4 text-gray-700 mt-6">
-                <a
+                {/* <a
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -69,9 +71,9 @@ const Contect = () => {
                   aria-label="Facebook"
                 >
                   <FaFacebook className="text-xl" />
-                </a>
+                </a> */}
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/sanad_.iq?igsh=MWIzbzJhd3FtOGJwNQ%3D%3D&utm_source=qr"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gradient-to-br hover:from-purple-600 hover:via-pink-600 hover:to-orange-500 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
@@ -80,7 +82,7 @@ const Contect = () => {
                   <FaInstagram className="text-xl" />
                 </a>
                 <a
-                  href="https://tiktok.com"
+                  href="https://www.tiktok.com/@sanad_.iq?_r=1&_t=ZS-93TgRbF4hd4"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-100 hover:bg-black hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
@@ -88,8 +90,19 @@ const Contect = () => {
                 >
                   <FaTiktok className="text-xl" />
                 </a>
+
                 <a
-                  href="https://botim.me"
+                  href="https://wa.me/9647700180809"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-100 hover:bg-green-600 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                  aria-label="WhatsApp"
+                >
+                  <WhatsAppOutlined className="text-xl" />
+                </a>
+                <a
+                  // +964 770 018 0809
+                  href="botim://send?phone=9647700180809"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-100 hover:bg-sky-600 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
